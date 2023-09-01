@@ -1,5 +1,5 @@
 <template>
-	<div class="text-zinc-600 dark:text-zinc-400 dark:bg-black px-5 min-h-screen font-jost">
+	<div class="text-zinc-600 dark:text-zinc-400 bg-zinc-100 dark:bg-zinc-900 p-4 min-h-screen font-jost">
 		<Navbar class="z-10" />
 		<slot />
 	</div>

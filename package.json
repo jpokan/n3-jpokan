@@ -8,9 +8,11 @@
 		"postinstall": "nuxt prepare"
 	},
 	"devDependencies": {
-		"@nuxtjs/color-mode": "^3.2.0",
-		"@nuxtjs/tailwindcss": "^6.3.0",
-		"nuxt": "3.1.1"
+		"@nuxt/content": "^2.8.1",
+		"@nuxtjs/color-mode": "^3.3.0",
+		"@nuxtjs/tailwindcss": "^6.8.0",
+		"@tailwindcss/typography": "^0.5.9",
+		"nuxt": "3.7.0"
 	},
 	"engines": {
 		"node": ">=16.11.0"

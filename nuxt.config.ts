@@ -3,7 +3,8 @@ export default defineNuxtConfig({
 	css: ['@/assets/css/fonts.css'],
 	modules: [
 		'@nuxtjs/tailwindcss',
-		'@nuxtjs/color-mode'
+		'@nuxtjs/color-mode',
+		'@nuxt/content'
 	],
 	tailwindcss: {
 		cssPath: '~/src/assets/css/tailwind.css',
@@ -11,5 +12,10 @@ export default defineNuxtConfig({
 	},
 	colorMode: {
 		classSuffix: ''
+	},
+	content: {
+		navigation: {
+			fields: ['published']
+		}
 	}
 })
