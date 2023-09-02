@@ -1,3 +1,18 @@
 <template>
-	<div>Home Page</div>
+	<div class="text-5xl text-zinc-600 dark:text-zinc-100 ">
+		<div class="font-limelight ">JPOKAN</div>
+		<!-- <div class="font-brunoacesc font-thin">JPOKAN</div> -->
+		<!-- <div class="font-righteous">JPOKAN</div> -->
+		<!-- <div class="font-koulen">JPOKAN</div> -->
+		<!-- <div class="font-squadaone">JPOKAN</div> -->
+		<!-- <div class="font-monomaniacone">JPOKAN</div> -->
+		<!-- <div class="font-leaguegothic_condensed">JPOKAN</div> -->
+		<!-- <div class="font-bayon">JPOKAN</div> -->
+		<!-- <div class="font-leaguegothic_semicondensed">JPOKAN</div> -->
+		<!-- <div class="font-leaguegothic">JPOKAN</div> -->
+	</div>
+	<div class="uppercase">
+		Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus qui, magni asperiores inventore nostrum in
+		laudantium explicabo nobis suscipit optio sequi autem vitae commodi! Corrupti a voluptates magnam expedita eos.
+	</div>
 </template>
