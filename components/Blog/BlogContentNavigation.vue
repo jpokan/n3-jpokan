@@ -18,7 +18,7 @@ defineProps({
         :to="item._path">
         {{ item.title }}
       </NuxtLink>
-      <BlogContentNavigation class="p-5" v-if="item.children" :navigation-tree="item.children" />
+      <BlogContentNavigation class="p-4" v-if="item.children" :navigation-tree="item.children" />
     </li>
   </ul>
 </template>
