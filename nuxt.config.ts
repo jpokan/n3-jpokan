@@ -1,6 +1,6 @@
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
-	css: ['@/assets/css/fonts.css'],
+	css: ['@/assets/css/fonts.css', '@/assets/css/satoshi.css'],
 	modules: [
 		'@nuxtjs/tailwindcss',
 		'@nuxtjs/color-mode',
