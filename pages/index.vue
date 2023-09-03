@@ -1,5 +1,5 @@
 <template>
-	<div class="home text-5xl text-zinc-600 dark:text-zinc-300 ">
+	<div class="text-5xl text-zinc-600 dark:text-zinc-300 ">
 		<div class="font-limelight ">JPOKAN</div>
 
 		<!-- <div class="font-brunoacesc font-thin">JPOKAN</div> -->
@@ -16,6 +16,7 @@
 		<div>INSTAGRAM ↗</div>
 		<div>EMAIL</div>
 		<div>CLIENTS</div>
+		<div>Perú</div>
 		<div>1</div>
 		<div>2</div>
 		Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus qui, magni asperiores inventore nostrum in
@@ -25,8 +26,8 @@
 </template>
 
 <style>
-.home {
+/* .home {
 	background-image: radial-gradient(circle at 1px 1px, black 1px, transparent 0);
 	background-size: 10px 10px;
-}
+} */
 </style>
