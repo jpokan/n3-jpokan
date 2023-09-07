@@ -5,8 +5,7 @@
 				class="flex flex-col text-center  p-2 gap-5 dark:bg-zinc-900 bg-zinc-100 dark:border-zinc-400 border-zinc-400 border rounded-lg shadow-lg md:shadow-none md:border-none">
 				<div v-for="item in elements" :key="item.title"
 					class="hover:text-black dark:hover:text-white transition-colors duration-200">
-					<NuxtLink class="font-medium font-limelight" v-if="item.type === 'text'" :to="item.to"
-						:title="item.title">
+					<NuxtLink class="font-medium font-jost" v-if="item.type === 'text'" :to="item.to" :title="item.title">
 						{{ item.text }}
 					</NuxtLink>
 					<NuxtLink v-if="item.type === 'icon'" :to="item.to" :title="item.title">

@@ -1,8 +1,12 @@
 <template>
-	<div class="pb-5">
-		<hr class="border-zinc-800 dark:border-zinc-300 my-5" />
-		<div class="text-zinc-800 dark:text-zinc-300 font-light">
-			<a class="underline" rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">BY-NC-SA 4.0</a>
+	<div class="grid gap-4 grid-cols-4 text-xs font-bold font-satoshi">
+		<div class="border-b-2 border-solid border-zinc-700 dark:border-zinc-200" v-for="item in links" key="item">
+			{{ item }}
 		</div>
+		© 2023 - JPOKAN
 	</div>
 </template>
+
+<script setup>
+const links = ['EMAIL', 'INSTAGRAM', 'TWITTER', 'GITHUB']
+</script>

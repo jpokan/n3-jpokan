@@ -1,7 +1,6 @@
 <template>
-	<div class="text-5xl font-limelight text-zinc-600 dark:text-zinc-100 uppercase">Blog</div>
+	<div class="text-5xl font-bold font-jost text-zinc-600 dark:text-zinc-100 uppercase">Blog</div>
 	<BlogContentNavigation :navigation-tree="navigation[0].children" />
-	<Footer />
 </template>
 
 <script setup>

@@ -1,7 +1,8 @@
 <template>
 	<button @click="toggleTheme()">
-		<div v-show="colorMode.unknown" class="animate-pulse rounded-full bg-zinc-600 dark:bg-zinc-400 h-2 w-2 mx-auto">
-		</div>
+		<span v-show="colorMode.unknown"
+			class="inline-block animate-pulse rounded-full bg-zinc-600 dark:bg-zinc-400 h-2 w-2 mx-auto">
+		</span>
 		<IconsSun v-show="colorMode.value === 'light'" />
 		<IconsMoon v-show="colorMode.value === 'dark'" />
 	</button>

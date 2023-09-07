@@ -1,5 +1,5 @@
 <template>
-    <article class="prose prose-zinc dark:prose-invert font-jost prose-a:no-underline">
+    <article class="prose prose-zinc dark:prose-invert prose-a:font-black">
         <ContentDoc />
     </article>
 </template>
