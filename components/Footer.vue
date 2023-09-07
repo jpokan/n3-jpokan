@@ -1,12 +1,11 @@
 <template>
-	<div class="grid gap-4 grid-cols-4 text-xs font-bold font-satoshi">
+	<div class="flex flex-col text-right text-xs font-semibold font-satoshi bg-zinc-100 dark:bg-zinc-900">
 		<div class="border-b-2 border-solid border-zinc-700 dark:border-zinc-200" v-for="item in links" key="item">
-			{{ item }}
+			<span>{{ item }}</span>
 		</div>
-		© 2023 - JPOKAN
 	</div>
 </template>
 
 <script setup>
-const links = ['EMAIL', 'INSTAGRAM', 'TWITTER', 'GITHUB']
+const links = ['EMAIL', 'TWITTER', 'GITHUB']
 </script>

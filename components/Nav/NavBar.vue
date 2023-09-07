@@ -1,18 +1,17 @@
 <template>
-	<div class="fixed right-0 mx-4 bottom-1/2 transform translate-y-1/2">
-		<div class="grid items-center h-full">
-			<div
-				class="flex flex-col text-center  p-2 gap-5 dark:bg-zinc-900 bg-zinc-100 dark:border-zinc-400 border-zinc-400 border rounded-lg shadow-lg md:shadow-none md:border-none">
-				<div v-for="item in elements" :key="item.title"
-					class="hover:text-black dark:hover:text-white transition-colors duration-200">
-					<NuxtLink class="font-medium font-jost" v-if="item.type === 'text'" :to="item.to" :title="item.title">
-						{{ item.text }}
-					</NuxtLink>
-					<NuxtLink v-if="item.type === 'icon'" :to="item.to" :title="item.title">
-						<NavComp :component="item.component" />
-					</NuxtLink>
-					<NavComp v-if="item.type === 'theme'" :component="item.component" />
-				</div>
+	<div class="fixed right-14 bottom-1/2 transform translate-y-1/2 sm:top-14 sm:translate-y-0 sm:h-12">
+		<div
+			class="flex flex-col leading-none sm:flex-row text-center items-center h-full p-5 gap-5 dark:bg-zinc-900 bg-zinc-100">
+			<div v-for="item in elements" :key="item.title"
+				class="hover:text-black dark:hover:text-white transition-colors duration-200 h-5 w-5">
+				<NuxtLink class="font-bold font-jost w-full h-full" v-if="item.type === 'text'" :to="item.to"
+					:title="item.title">
+					{{ item.text }}
+				</NuxtLink>
+				<NuxtLink v-if="item.type === 'icon'" :to="item.to" :title="item.title">
+					<NavComp :component="item.component" />
+				</NuxtLink>
+				<NavComp v-if="item.type === 'theme'" :component="item.component" />
 			</div>
 		</div>
 	</div>

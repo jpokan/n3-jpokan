@@ -1,0 +1,14 @@
+<template>
+    <div class="font-jost font-bold text-5xl flex flex-wrap">
+        <NuxtLink class="mr-5" to="/">JPOKAN</NuxtLink>
+        <NuxtLink :to="'/' + subtitle">
+            <span class="inline-block text-zinc-200 dark:text-zinc-800 uppercase">{{ subtitle }}</span>
+        </NuxtLink>
+        <hr>
+    </div>
+</template>
+
+<script setup>
+const props = defineProps(['subtitle'])
+
+</script>

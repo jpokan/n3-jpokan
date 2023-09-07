@@ -1,6 +1,5 @@
 <template>
 	<div class="text-5xl">
-		<div class="font-limelight">JPOKAN</div>
 		<!-- <div class="font-brunoacesc font-thin">JPOKAN</div> -->
 		<!-- <div class="font-righteous">JPOKAN</div> -->
 		<!-- <div class="font-koulen">JPOKAN</div> -->
