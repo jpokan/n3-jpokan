@@ -3,7 +3,11 @@
 @tailwind utilities;
 
 @layer base {
-    a, button {
-        @apply outline-offset-8 outline-current;
+    .jpk-link {
+        @apply hover:text-black dark:hover:text-white transition-colors duration-200;
+    }
+
+    .jpk-theme {
+        @apply text-zinc-700 dark:text-zinc-200 bg-zinc-100 dark:bg-zinc-900;
     }
 }

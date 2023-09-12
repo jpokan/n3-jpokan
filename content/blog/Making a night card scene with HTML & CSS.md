@@ -13,9 +13,9 @@ First, we'll set some initial values using CSS variables in the root of the docu
 :root {
 	--width: 250px;
 	--height: 400px;
-	--ocean: #0A1A29;
-	--sky: #01213A;
-	--moon: #E2D5C5;
+	--ocean: #0a1a29;
+	--sky: #01213a;
+	--moon: #e2d5c5;
 }
 ```
 
@@ -27,7 +27,7 @@ Create a **div** element with a class of **.container** and center the elements 
 
 ```html
 <div class="container">
-    <!-- Card inside here -->
+	<!-- Card inside here -->
 </div>
 ```
 
@@ -52,8 +52,8 @@ Now we add another div inside the container with a class of **.card** to create 
 
 ```html
 <div class="container">
-    <div class="card">
-    <!-- The moon, the sky and ocean will be here -->
+	<div class="card">
+		<!-- The moon, the sky and ocean will be here -->
 	</div>
 </div>
 ```
@@ -65,13 +65,9 @@ To see the card better we will add a box shadow. I recommend using this **[https
 ```css
 .card {
 	position: relative;
-	box-shadow:
-        0 2.8px 3.8px rgba(0, 0, 0, 0.056),
-        0 6.7px 8.1px rgba(0, 0, 0, 0.081),
-        0 12.5px 13.3px rgba(0, 0, 0, 0.1),
-        0 22.3px 20.8px rgba(0, 0, 0, 0.119),
-        0 41.8px 35px rgba(0, 0, 0, 0.144),
-        0 100px 80px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 2.8px 3.8px rgba(0, 0, 0, 0.056), 0 6.7px 8.1px rgba(0, 0, 0, 0.081),
+		0 12.5px 13.3px rgba(0, 0, 0, 0.1), 0 22.3px 20.8px rgba(0, 0, 0, 0.119),
+		0 41.8px 35px rgba(0, 0, 0, 0.144), 0 100px 80px rgba(0, 0, 0, 0.2);
 	width: var(--width);
 	height: var(--height);
 	border-radius: 10px;
@@ -93,7 +89,7 @@ Next, we are going to fill the card with the color of the sky. We can create a d
 <div class="container">
 	<div class="card">
 		<div class="sky"></div>
-        <!-- Moon and Ocean -->
+		<!-- Moon and Ocean -->
 	</div>
 </div>
 ```
@@ -107,11 +103,11 @@ And finally, we don't want the night to be a flat color, we want it a bit darker
 	height: var(--height);
 	width: var(--width);
 	background-color: var(--sky);
-	background:
-		linear-gradient(
-			0deg,
-			rgba(10,26,41,0) 75%,
-			rgba(10,26,41,1) 100%);
+	background: linear-gradient(
+		0deg,
+		rgba(10, 26, 41, 0) 75%,
+		rgba(10, 26, 41, 1) 100%
+	);
 }
 ```
 
@@ -126,7 +122,7 @@ As before, create a div with a class of **.moon**.
 <div class="container">
 	<div class="card">
 		<div class="sky"></div>
-        <div class="moon"></div>
+		<div class="moon"></div>
 		<!-- ocean -->
 	</div>
 </div>
@@ -144,13 +140,9 @@ Because the moon its a circle, we will add a border-radius of 100% to round the 
 	width: 20px;
 	height: 20px;
 	border-radius: 100%;
-	box-shadow:
-		0 2.8px 3.9px #A89587,
-		0 6.7px 9.3px #E2D5C5,
-		0 12.5px 17.5px #E2D5C5,
-		0 22.3px 31.3px #E2D5C5,
-		0 41.8px 58.5px #E2D5C5,
-		0 100px 140px #E2D5C5;
+	box-shadow: 0 2.8px 3.9px #a89587, 0 6.7px 9.3px #e2d5c5,
+		0 12.5px 17.5px #e2d5c5, 0 22.3px 31.3px #e2d5c5, 0 41.8px 58.5px #e2d5c5, 0
+			100px 140px #e2d5c5;
 }
 ```
 
@@ -165,15 +157,15 @@ For the html part, we add a div with a **.ocean** class and inside it we add ano
 <div class="container">
 	<div class="card">
 		<div class="sky"></div>
-        <div class="moon"></div>
-        <div class="ocean">
+		<div class="moon"></div>
+		<div class="ocean">
 			<div class="moon-reflect"></div>
 		</div>
 	</div>
 </div>
 ```
 
-### **.ocean**
+**.ocean**
 
 The important thing here is that in order to be able to set a desired height of 150px from bottom to top, we must set this position to absolute and start from the bottom, that is why we set **bottom: 0**. Similarly to the sky, we add the background color, a linear gradient and we set the width to the card size. Also note that we set a perspective value of 100px so that we can make transformations in perspective of the **.moon-reflect** child element we will add next.
 
@@ -183,13 +175,13 @@ The important thing here is that in order to be able to set a desired height of 
 	bottom: 0;
 	width: var(--width);
 	height: 150px;
-	background:
-		linear-gradient(
-			0deg,
-			rgba(1,33,58,0) 0%,
-			rgba(1,33,58,0.1881127450980392) 40%,
-			rgba(1,33,58,0.7595413165266106) 85%,
-			rgba(1,33,58,0) 100%);
+	background: linear-gradient(
+		0deg,
+		rgba(1, 33, 58, 0) 0%,
+		rgba(1, 33, 58, 0.1881127450980392) 40%,
+		rgba(1, 33, 58, 0.7595413165266106) 85%,
+		rgba(1, 33, 58, 0) 100%
+	);
 	background-color: var(--ocean);
 	perspective: 100px;
 }
@@ -197,27 +189,23 @@ The important thing here is that in order to be able to set a desired height of 
 
 ![Img](https://a.storyblok.com/f/98358/1440x900/cefd19ae20/screenshot-2021-05-05-163958.png)
 
-### **.moon-reflect**
+**.moon-reflect**
 
 We are almost there. We need the moon and the moonlight to be reflected on the water. In our **.moon-reflect** element, we will position the moon accordingly and with a box-shadow we can create that moonlight diffusion. Note that we are making a transform rotate to make use of that perspective we set up earlier, this will generate that sense of depth of the ocean.
 
 ```css
 .moon-reflect {
 	position: absolute;
-	background-color: rgb(226,214,198,0.15);
+	background-color: rgb(226, 214, 198, 0.15);
 	top: 20px;
 	left: 115px;
 	height: 20px;
 	width: 20px;
 	border-radius: 10px;
 	transform: rotateX(45deg);
-	box-shadow:
-  		0 8.3px 52.7px #E2D5C5,
-  		0 20px 89.4px #E2D5C5,
-  		0 37.6px 116.2px #E2D5C5,
-  		0 67px 140.6px #E2D5C5,
-  		0 125.3px 177.2px #E2D5C5,
-  		0 300px 300px #E2D5C5;
+	box-shadow: 0 8.3px 52.7px #e2d5c5, 0 20px 89.4px #e2d5c5,
+		0 37.6px 116.2px #e2d5c5, 0 67px 140.6px #e2d5c5, 0 125.3px 177.2px #e2d5c5,
+		0 300px 300px #e2d5c5;
 }
 ```
 

@@ -1,10 +1,9 @@
 <template>
-    <div class="text-zinc-700 dark:text-zinc-200 bg-zinc-100 dark:bg-zinc-900 p-14 min-h-screen font-satoshi relative">
+    <div class="jpk-theme p-[52px] min-h-screen font-satoshi relative">
         <Logo subtitle="lab" />
-        <NavBar class="z-10" />
-        <div class="pt-14">
+        <NavBar class="z-10 jpk-theme" />
+        <div class="pt-[52px]">
             <slot />
         </div>
-        <Footer class="bottom-14 right-14 fixed" />
     </div>
 </template>

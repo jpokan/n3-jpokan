@@ -1,7 +1,8 @@
 <template>
 	<div class="grid gap-5 grid-cols-4 font-bold font-satoshi">
-		<div class="border-b-2 border-solid border-zinc-700 dark:border-zinc-200" v-for="item in links" key="item">{{ item
-		}}</div>
+		<div class="border-b-2 border-solid border-zinc-700 dark:border-zinc-200" v-for="item in links" key="item">
+			{{ item }}
+		</div>
 	</div>
 </template>
 
@@ -9,5 +10,5 @@
 definePageMeta({
 	layout: "lab",
 })
-const links = ['SHADERS', 'THREEJS', '', '']
+const links = ['WEBGL', 'CONCEPTS', 'TOOLS', 'NOTES']
 </script>

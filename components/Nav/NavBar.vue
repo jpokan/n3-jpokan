@@ -1,9 +1,7 @@
 <template>
-	<div class="fixed right-14 bottom-1/2 transform translate-y-1/2 sm:top-14 sm:translate-y-0 sm:h-12">
-		<div
-			class="flex flex-col leading-none sm:flex-row text-center items-center h-full p-5 gap-5 dark:bg-zinc-900 bg-zinc-100">
-			<div v-for="item in elements" :key="item.title"
-				class="hover:text-black dark:hover:text-white transition-colors duration-200 h-5 w-5">
+	<div class="fixed right-[52px] bottom-1/2 transform translate-y-1/2 sm:top-[52px] sm:translate-y-0 sm:h-[52px]">
+		<div class="flex flex-col leading-none sm:flex-row text-center items-center p-4 gap-5">
+			<div v-for="item in elements" :key="item.title" class="h-5 w-5">
 				<NuxtLink class="font-bold font-jost w-full h-full" v-if="item.type === 'text'" :to="item.to"
 					:title="item.title">
 					{{ item.text }}
