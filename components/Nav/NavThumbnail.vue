@@ -1,12 +1,10 @@
 <template>
-    <div class="col-start-1 col-end-2 row-start-1 place-self-center">
-        <div class="grid grid-cols-1 gap-[15px] relative">
-            <img :id="'thumbnail-' + index" @click="pick(index, item.path)"
-                class="cursor-pointer w-full h-full max-h-[52px]" v-for="(item, index) in images" :key="index"
-                :src="item.path" alt="">
-            <div id="indicator" :style="style"
-                class="absolute w-full aspect-video border max-h-[52px] scale-y-[1.22] scale-x-[1.13] shadow-lg">
-            </div>
+    <div class="col-start-1 col-end-2 row-start-1 row-end-2 gap-[15px] flex flex-col flex-grow relative place-self-center">
+        <img :id="`thumbnail-${index}`" @click="pick(index, item.path)"
+            class="cursor-pointer w-full max-h-[52px] object-contain aspect-video" v-for="(item, index) in images"
+            :key="index" :src="item.path" alt="">
+        <div id="indicator" :style="style"
+            class="absolute top-0 w-full aspect-video border max-h-[52px] scale-y-[1.22] scale-x-[1.13] shadow-lg">
         </div>
     </div>
 </template>

@@ -1,9 +1,8 @@
 <template>
     <div id="screen"
-        class="overflow-hidden col-start-2 col-end-6 row-start-1 row-end-2 place-self-center  w-full relative aspect-video">
-        <div :id="'screen-' + index" class="absolute inset-0 grid place-items-center" v-for="(item, index) in images"
-            :key="index">
-            <img v-show="item.visible" class="aspect-video anim" :src="item.path">
+        class="overflow-hidden col-start-2 col-end-6 row-start-1 row-end-2 place-self-center w-full relative aspect-video max-h-full">
+        <div :id="'screen-' + index" class="absolute inset-0" v-for="(item, index) in images" :key="index">
+            <img v-show="item.visible" class="aspect-video object-contain h-full w-full" :src="item.path">
         </div>
     </div>
 </template>

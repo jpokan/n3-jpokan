@@ -1,14 +1,8 @@
 <template>
-	<div :style="style"
-		class="text-zinc-700 dark:text-zinc-200 mx-auto flex justify-center min-h-screen font-satoshi relative">
-		<div v-if="$device.isDesktopOrTablet" class="fixed inset-y-[156px] inset-x-[52px]">
-			<slot />
-		</div>
-		<div v-else class="py-14">
-			<slot />
-		</div>
+	<div class="text-zinc-700 jpk-theme dark:text-zinc-200 p-[52px] mx-auto font-satoshi relative h-screen">
 		<Logo />
-		<NavBar :style="style" />
+		<NavBar />
+		<slot />
 	</div>
 </template>
 
