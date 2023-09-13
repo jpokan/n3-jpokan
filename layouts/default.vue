@@ -1,8 +1,8 @@
 <template>
 	<div class="text-zinc-700 jpk-theme dark:text-zinc-200 p-[52px] mx-auto font-satoshi relative h-screen">
+		<slot />
 		<Logo />
 		<NavBar />
-		<slot />
 	</div>
 </template>
 
