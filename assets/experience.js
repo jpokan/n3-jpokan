@@ -15,16 +15,22 @@ export default class Experience {
 	init() {
 		const names = [
 			"daniel-chung",
-			"ve-arquitectura",
-			"squidplot",
-			"jpokan-2020",
-			"jorge-alberto-ayllon",
+			// "ve-arquitectura",
+			// "squidplot",
+			// "jpokan-2020",
+			// "jorge-alberto-ayllon",
 		];
 
 		const canvas = document.createElement("canvas");
 		canvas.setAttribute("id", "webgl");
 		document.body.appendChild(canvas);
 		window.experience = true;
+
+		CustomEase.create(
+			"custom",
+			"M0,0 C0.35,0.06 0.541,0.298 0.612,0.396 0.758,0.598 0.784,0.624 1,1 "
+		);
+
 		const sizes = {
 			width: window.innerWidth,
 			height: window.innerHeight,
@@ -45,17 +51,18 @@ export default class Experience {
 			const tl = gsap.timeline();
 			const positions = meshes.map((a) => a.position);
 
-			for (let i = 0; i < positions.length; i++) {
-				const element = positions[i];
-				tl.to(element, {
-					ease: "power1.out",
-					y: i * 10,
-					delay: -0.1,
-				});
-			}
+			// for (let i = 0; i < positions.length; i++) {
+			// 	const element = positions[i];
+			// 	tl.to(element, {
+			// 		ease: "custom.out",
+			// 		y: i * 10,
+			// 		delay: -0.1,
+			// 	});
+			// }
 			tl.to(camera.position, {
-				ease: "power1.out",
+				ease: "custom",
 				z: 10,
+				duration: 1.25,
 			});
 
 			console.log(camera);
@@ -119,7 +126,7 @@ export default class Experience {
 		});
 		renderer.setSize(sizes.width, sizes.height);
 		renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-		renderer.outputColorSpace = THREE.SRGBColorSpace;
+		renderer.outputColorSpace = THREE.LinearSRGBColorSpace;
 
 		// Clock
 		const clock = new THREE.Clock();
