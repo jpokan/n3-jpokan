@@ -1,8 +1,8 @@
 <template>
-	<div class="text-zinc-700 jpk-theme dark:text-zinc-200 p-[52px] mx-auto font-satoshi relative h-screen">
+	<div class="text-zinc-700  dark:text-zinc-200 font-satoshi ">
 		<slot />
-		<Logo />
-		<NavBar />
+		<Logo :style="style" class="fixed top-[52px] left-[52px]" />
+		<NavBar :style="style" />
 	</div>
 </template>
 
@@ -18,7 +18,7 @@ textColor.value = styles[0].textColorDark
 backgroundColor.value = styles[0].backgroundColor
 
 const style = computed(() => {
-	return `background-color: ${backgroundColor.value}; color: ${textColor.value}`
+	return `color: ${textColor.value}`
 })
 
 </script>

@@ -1,83 +1,143 @@
-import * as THREE from 'three'
-import { OrbitControls } from "three/examples/jsm/controls/OrbitControls"
+import "assets/css/webgl.css";
+import * as THREE from "three";
+import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 
 export default class Experience {
-    constructor() {
-        const sizes = {
-            width: window.innerWidth,
-            height: window.innerHeight,
-        }
+	constructor() {
+		if (window.experience) {
+			console.log("already built");
+			return;
+		} else {
+			this.init();
+		}
+	}
 
-        const canvas = document.getElementById('webgl')
-        const scene = new THREE.Scene()
+	init() {
+		const names = [
+			"daniel-chung",
+			"ve-arquitectura",
+			"squidplot",
+			"jpokan-2020",
+			"jorge-alberto-ayllon",
+		];
 
-        const box = new THREE.BoxGeometry()
-        const material = new THREE.MeshBasicMaterial({ color: 0x54eaea })
-        const mesh = new THREE.Mesh(box, material)
-        scene.add(mesh)
-        /**
-         * Resizer
-         */
-        window.addEventListener("resize", () => {
-            // Update sizes
-            sizes.width = window.innerWidth
-            sizes.height = window.innerHeight
+		const canvas = document.createElement("canvas");
+		canvas.setAttribute("id", "webgl");
+		document.body.appendChild(canvas);
+		window.experience = true;
+		const sizes = {
+			width: window.innerWidth,
+			height: window.innerHeight,
+		};
 
-            // Update camera
-            camera.aspect = sizes.width / sizes.height
-            camera.updateProjectionMatrix()
+		const manager = new THREE.LoadingManager();
+		const scene = new THREE.Scene();
+		const loader = new THREE.TextureLoader(manager);
+		//Meshes
+		const meshes = [];
 
-            // Update renderer
-            renderer.setSize(sizes.width, sizes.height)
-            renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
-        })
+		manager.onProgress = function (url, itemsLoaded, itemsTotal) {
+			console.log(url, itemsLoaded, itemsTotal);
+		};
 
-        /**
-         * Camera
-         */
+		manager.onLoad = function () {
+			console.log("loaded all");
+			const tl = gsap.timeline();
+			const positions = meshes.map((a) => a.position);
 
-        // Perspective Camera
-        const camera = new THREE.PerspectiveCamera(
-            75,
-            sizes.width / sizes.height,
-            0.1,
-            100
-        )
-        camera.position.set(0, 0, 2)
+			for (let i = 0; i < positions.length; i++) {
+				const element = positions[i];
+				tl.to(element, {
+					ease: "power1.out",
+					y: i * 10,
+					delay: -0.1,
+				});
+			}
+			tl.to(camera.position, {
+				ease: "power1.out",
+				z: 10,
+			});
 
-        // Controls
-        const controls = new OrbitControls(camera, canvas)
-        controls.enableDamping = true
-        controls.update()
+			console.log(camera);
+		};
 
-        /**
-         * Renderer
-         */
-        const renderer = new THREE.WebGLRenderer({
-            canvas: canvas,
-            antialias: true,
-            alpha: true,
-        })
-        renderer.setSize(sizes.width, sizes.height)
-        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
+		for (let index = 0; index < names.length; index++) {
+			const name = names[index];
 
-        // Clock
-        const clock = new THREE.Clock()
+			loader.load(`/img/${name}/1.png`, function (texture) {
+				const material = new THREE.MeshBasicMaterial();
+				material.map = texture;
+				const box = new THREE.PlaneGeometry(16, 9, 10);
+				const mesh = new THREE.Mesh(box, material);
+				scene.add(mesh);
+				meshes.push(mesh);
+			});
+		}
 
-        /**
-         * Animate
-         */
-        const tick = () => {
-            // Update controls
-            controls.update()
+		/**
+		 * Resizer
+		 */
+		window.addEventListener("resize", () => {
+			// Update sizes
+			sizes.width = window.innerWidth;
+			sizes.height = window.innerHeight;
 
-            // Render
-            renderer.render(scene, camera)
+			// Update camera
+			camera.aspect = sizes.width / sizes.height;
+			camera.updateProjectionMatrix();
 
-            // Call tick again on the next frame
-            requestAnimationFrame(tick)
-        }
+			// Update renderer
+			renderer.setSize(sizes.width, sizes.height);
+			renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+		});
 
-        tick()
-    }
+		/**
+		 * Camera
+		 */
+
+		// Perspective Camera
+		const camera = new THREE.PerspectiveCamera(
+			75,
+			sizes.width / sizes.height,
+			0.1,
+			100
+		);
+		camera.position.set(0, 0, 50);
+
+		// Controls
+		const controls = new OrbitControls(camera, canvas);
+		controls.enableDamping = true;
+		controls.update();
+
+		/**
+		 * Renderer
+		 */
+		const renderer = new THREE.WebGLRenderer({
+			canvas: canvas,
+			antialias: true,
+			alpha: true,
+		});
+		renderer.setSize(sizes.width, sizes.height);
+		renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+		renderer.outputColorSpace = THREE.SRGBColorSpace;
+
+		// Clock
+		const clock = new THREE.Clock();
+
+		/**
+		 * Animate
+		 */
+		const tick = () => {
+			// Update controls
+			controls.update();
+
+			// Render
+			renderer.render(scene, camera);
+
+			// Call tick again on the next frame
+			requestAnimationFrame(tick);
+		};
+
+		tick();
+	}
 }
