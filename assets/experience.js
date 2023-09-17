@@ -8,12 +8,12 @@ import * as EssentialsPlugin from "@tweakpane/plugin-essentials";
 
 export default class Experience {
 	constructor() {
-		// if (window.experience) {
-		// 	console.log("already built");
-		// 	return;
-		// } else {
-		this.init();
-		// }
+		if (window.experience) {
+			console.log("already built");
+			return;
+		} else {
+			this.init();
+		}
 	}
 
 	init() {
@@ -95,83 +95,96 @@ export default class Experience {
 		const height = 9;
 		const segments = 10;
 
-		function addMesh(texture) {
+		function addMesh(shader, i) {
 			const plane = new THREE.PlaneGeometry(width, height, segments);
-			const mesh = new THREE.Mesh(plane, shaderMaterial);
+			const mesh = new THREE.Mesh(
+				plane,
+				new THREE.RawShaderMaterial({
+					uniforms: shader,
+					vertexShader,
+					fragmentShader,
+				})
+			);
+			mesh.position.z = -i;
+
+			gui_shader
+				.addBinding(slider, "horizontal", {
+					min: 0,
+					max: 1,
+					step: 0.01,
+					label: "horizontal",
+				})
+				.on("change", (ev) => {
+					shader.u_horizontal.value.x = ev.value.min;
+					shader.u_horizontal.value.y = ev.value.max;
+				});
+
+			gui_shader
+				.addBinding(slider, "vertical", {
+					min: 0,
+					max: 1,
+					step: 0.01,
+					label: "vertical",
+				})
+				.on("change", (ev) => {
+					shader.u_vertical.value.x = ev.value.min;
+					shader.u_vertical.value.y = ev.value.max;
+				});
 			scene.add(mesh);
 		}
 
-		const tex = loader.load("/img/jpokan-2020/1.png", (texture) => {
-			addMesh();
-		});
+		for (let index = 0; index < names.length; index++) {
+			const element = names[index];
+
+			const tex = loader.load(`/img/${element}/1.png`, () => {
+				addMesh(uniformOBJ, index);
+			});
+
+			const uniformOBJ = {
+				u_tex: { value: tex },
+				u_horizontal: { value: { x: 0.0, y: 0.5 } },
+				u_vertical: { value: { x: 0.0, y: 0.5 } },
+			};
+		}
+
+		// const tex = loader.load("/img/jpokan-2020/1.png", () => {
+		// 	addMesh();
+		// });
 
 		const slider = {
 			horizontal: { min: 0, max: 1 },
 			vertical: { min: 0, max: 1 },
 		};
 
-		const shader = {
-			u_tex: { value: tex },
-			u_horizontal: { value: { x: 0.5, y: 0.5 } },
-			u_vertical: { value: { x: 0.5, y: 0.5 } },
-		};
-		gui_shader
-			.addBinding(slider, "horizontal", {
-				min: 0,
-				max: 1,
-				step: 0.01,
-				label: "horizontal",
-			})
-			.on("change", (ev) => {
-				shader.u_horizontal.value.x = ev.value.min;
-				shader.u_horizontal.value.y = ev.value.max;
-			});
-
-		gui_shader
-			.addBinding(slider, "vertical", {
-				min: 0,
-				max: 1,
-				step: 0.01,
-				label: "vertical",
-			})
-			.on("change", (ev) => {
-				shader.u_vertical.value.x = ev.value.min;
-				shader.u_vertical.value.y = ev.value.max;
-			});
-
-		const shaderMaterial = new THREE.RawShaderMaterial({
-			uniforms: shader,
-			vertexShader: vertexShader,
-			fragmentShader: fragmentShader,
-		});
-		const meshes = [];
-
 		manager.onProgress = function (url, itemsLoaded, itemsTotal) {
 			console.log(url, itemsLoaded, itemsTotal);
 		};
 
-		gsap.to(shader.u_horizontal.value, {
-			x: 0,
-			y: 1,
-			duration: 1.5,
-		});
-		gsap.to(shader.u_vertical.value, {
-			x: 0,
-			y: 1,
-			duration: 1.5,
-		});
-
 		manager.onLoad = function () {
 			console.log("loaded all");
-			gsap.to(camera.position, {
-				z: 6,
-				y: 0,
-				x: 0,
-				duration: 1.15,
-				delay: 0.1,
-			});
+			// startAnimations();
 		};
 
+		// function startAnimations() {
+		// 	gsap.to(camera.position, {
+		// 		z: 12,
+		// 		y: 0,
+		// 		x: 0,
+		// 		duration: 1.15,
+		// 		delay: 0.1,
+		// 	});
+
+		// 	gsap.to(shader.u_horizontal.value, {
+		// 		x: 0,
+		// 		y: 1,
+		// 		duration: 1.5,
+		// 	});
+		// 	gsap.to(shader.u_vertical.value, {
+		// 		x: 0,
+		// 		y: 1,
+		// 		duration: 1.5,
+		// 	});
+		// }
 		// for (let index = 0; index < names.length; index++) {
 		// 	const name = names[index];
 
