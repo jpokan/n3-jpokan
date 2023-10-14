@@ -35,8 +35,8 @@ En la actualidad, existen varias maneras de crear estos archivos y cada una tien
 
 - Creación a través de la "programación"
 
-	Cuando se crean estos archivos con código y por medio de un programador o un equipo de desarrollado web, la principal ventaja es que te va a permitir crear una página web a medida y según los requerimientos específicos que tengas. 
-	
+	Cuando se crean estos archivos con código y por medio de un programador o un equipo de desarrollado web, la principal ventaja es que te va a permitir crear una página web a medida y según los requerimientos específicos que tengas.
+
 	La desventaja más notable es alto costo y a veces el tiempo puede extenderse dependiendo del tipo de proyecto.
 
 	Es recomendable cuando el proyecto es grande y necesita un alto nivel de personalización en cuanto a estética y funcionalidad.
@@ -48,19 +48,19 @@ En la actualidad, existen varias maneras de crear estos archivos y cada una tien
 	- Crear, editar, borrar, organizar y publicar contenido
 	- Instalar plugins o integraciones
 	- Administrar acceso de usuarios y cuentas
-	
-	La mayor desventaja es que el nivel de personalización es bastante limitado si no se tiene el conocimiento de un programador para realizar los cambios correspondientes. 
+
+	La mayor desventaja es que el nivel de personalización es bastante limitado si no se tiene el conocimiento de un programador para realizar los cambios correspondientes.
 	
 	Es recomendable para proyectos pequeños y medianos. Para personas que quieran hacerlo por su propia cuenta.
 
 - Creación Híbrida
 
 	Con la ayuda de un programador es posible crear la página web con los sistemas pre-existentes mencionados anteriormente. Él se encargará de construir, poner a prueba y configurar lo necesario para que todo esté en orden.
-	
+
 	De esta manera, el desarrollador puede usar el sistema o plataforma deseada y modificarlo al gusto del cliente. Se puede reducir los costos de implementación de todo un equipo de desarrollo y lograr un proyecto con la funcionalidad y estética deseada. Muchas agencias digitales de marketing usan la estrategia de creación híbrida ya que pueden desarrollar proyectos básicos y complejos de manera rápida y a un precio cómodo.
-	
-	En la actualidad existe una tendencia hacia el uso de sistemas conocidos como "Headless CMS" (Strapi, Contentful, Storyblok, Prismic, Ghost, etc) que se enfocan en brindarle al cliente una plataforma más moderna para adminstrar su contenido y permitirle al programador mucha mayor flexibilidad para construir una página web personalizada, optimizada y veloz.	
-	
+
+	En la actualidad existe una tendencia hacia el uso de sistemas conocidos como "Headless CMS" (Strapi, Contentful, Storyblok, Prismic, Ghost, etc) que se enfocan en brindarle al cliente una plataforma más moderna para adminstrar su contenido y permitirle al programador mucha mayor flexibilidad para construir una página web personalizada, optimizada y veloz.
+
 	La principal desventaja es que el resultado final y el tiempo de desarrollo está directamente relacionada a la disponibilidad del desarrollador, a sus capacidades, eficiencia y productividad.
 
 Entonces, para recapitular. Si eres un individuo o una empresa pequeña, lo más conveniente es optar por la creación a través de un sistema pre-existente o creación híbrida. Si eres una entidad mediana o grande con un proyecto de gran envergadura y necesitas un alto nivel de personalización es recomendable optar por contratar un equipo de desarrollo especializado.

@@ -94,8 +94,8 @@ Next, we are going to fill the card with the color of the sky. We can create a d
 </div>
 ```
 
-We want the sky to be the same height and width of the card, so set both height and width to the `--height` and `--width` variables we have defined at the beginning.  
-Set the background color to `--sky` variable.  
+We want the sky to be the same height and width of the card, so set both height and width to the `--height` and `--width` variables we have defined at the beginning.
+Set the background color to `--sky` variable.
 And finally, we don't want the night to be a flat color, we want it a bit darker on the top. So we can add a linear gradient to the background in order to achieve this. Check this tool for gradient generation [https://cssgradient.io/](https://cssgradient.io/)
 
 ```css
