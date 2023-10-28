@@ -17,57 +17,57 @@ export default class Experience {
 	}
 
 	init() {
-		const pane = new Pane();
-		pane.registerPlugin(EssentialsPlugin);
+		// const pane = new Pane();
+		// pane.registerPlugin(EssentialsPlugin);
 
 		const parameters = {
 			background: "#89b5c8",
 			animate: false,
 		};
 
-		const pane_status = pane.addFolder({
-			title: "status",
-			expanded: false,
-		});
+		// const pane_status = pane.addFolder({
+		// 	title: "status",
+		// 	expanded: false,
+		// });
 
-		const fpsgraph = pane_status.addBlade({
-			view: "fpsgraph",
-		});
+		// const fpsgraph = pane_status.addBlade({
+		// 	view: "fpsgraph",
+		// });
 
-		pane_status
-			.addBinding(parameters, "background", { label: "bg_color" })
-			.on("change", (color) => {
-				canvas.style.background = `${color.value}`;
-			});
+		// pane_status
+		// 	.addBinding(parameters, "background", { label: "bg_color" })
+		// 	.on("change", (color) => {
+		// 		canvas.style.background = `${color.value}`;
+		// 	});
 
-		pane_status
-			.addButton({
-				title: parameters.animate ? "pause" : "play",
-				label: "animate",
-			})
-			.on("click", (event) => {
-				parameters.animate = !parameters.animate;
-				if (parameters.animate) {
-					event.target.title = "pause";
-				} else {
-					event.target.title = "play";
-				}
-			});
+		// pane_status
+		// 	.addButton({
+		// 		title: parameters.animate ? "pause" : "play",
+		// 		label: "animate",
+		// 	})
+		// 	.on("click", (event) => {
+		// 		parameters.animate = !parameters.animate;
+		// 		if (parameters.animate) {
+		// 			event.target.title = "pause";
+		// 		} else {
+		// 			event.target.title = "play";
+		// 		}
+		// 	});
 
 		const uniforms = {
 			u_time: { value: 0.0 },
 			u_radius: { value: 1.0 },
 		};
 
-		pane_status.addBinding(uniforms.u_time, "value", {
-			disabled: true,
-			label: "u_time",
-		});
+		// pane_status.addBinding(uniforms.u_time, "value", {
+		// 	disabled: true,
+		// 	label: "u_time",
+		// });
 
-		const gui_shader = pane.addFolder({
-			title: "shader",
-			expanded: true,
-		});
+		// const gui_shader = pane.addFolder({
+		// 	title: "shader",
+		// 	expanded: true,
+		// });
 
 		const names = [
 			"daniel-chung",
@@ -95,6 +95,9 @@ export default class Experience {
 		const height = 9;
 		const segments = 10;
 
+		const tl = gsap.timeline()
+		const tl2 = gsap.timeline()
+
 		function addMesh(shader, i) {
 			const plane = new THREE.PlaneGeometry(width, height, segments);
 			const mesh = new THREE.Mesh(
@@ -105,56 +108,58 @@ export default class Experience {
 					fragmentShader,
 				})
 			);
-			mesh.position.z = -i;
+			// position images
+			mesh.position.x = (i * width) + i
 
-			gui_shader
-				.addBinding(slider, "horizontal", {
-					min: 0,
-					max: 1,
-					step: 0.01,
-					label: "horizontal",
-				})
-				.on("change", (ev) => {
-					shader.u_horizontal.value.x = ev.value.min;
-					shader.u_horizontal.value.y = ev.value.max;
-				});
+			// gui_shader
+			// 	.addBinding(slider, "horizontal", {
+			// 		min: 0,
+			// 		max: 1,
+			// 		step: 0.01,
+			// 		label: "horizontal",
+			// 	})
+			// 	.on("change", (ev) => {
+			// 		shader.u_horizontal.value.x = ev.value.min;
+			// 		shader.u_horizontal.value.y = ev.value.max;
+			// 	});
 
-			gui_shader
-				.addBinding(slider, "vertical", {
-					min: 0,
-					max: 1,
-					step: 0.01,
-					label: "vertical",
-				})
-				.on("change", (ev) => {
-					shader.u_vertical.value.x = ev.value.min;
-					shader.u_vertical.value.y = ev.value.max;
-				});
+			// gui_shader
+			// 	.addBinding(slider, "vertical", {
+			// 		min: 0,
+			// 		max: 1,
+			// 		step: 0.01,
+			// 		label: "vertical",
+			// 	})
+			// 	.on("change", (ev) => {
+			// 		shader.u_vertical.value.x = ev.value.min;
+			// 		shader.u_vertical.value.y = ev.value.max;
+			// 	});
 			scene.add(mesh);
+		}
+
+		function addAnimation(shader) {
+			tl.to(shader.u_vertical.value, {
+				x: 0,
+				y: 1,
+				duration: 0.3,
+			})
 		}
 
 		for (let index = 0; index < names.length; index++) {
 			const element = names[index];
 
-			const tex = loader.load(`/img/${element}/1.png`, () => {
+			const tex = loader.load(`/img/${element}/3.png`, () => {
 				addMesh(uniformOBJ, index);
+				addAnimation(uniformOBJ)
 			});
 
+			tex.magFilter = THREE.NearestFilter
 			const uniformOBJ = {
 				u_tex: { value: tex },
-				u_horizontal: { value: { x: 0.0, y: 0.5 } },
-				u_vertical: { value: { x: 0.0, y: 0.5 } },
+				u_horizontal: { value: { x: 0.0, y: 1.0 } },
+				u_vertical: { value: { x: 0.0, y: 0.0 } },
 			};
 		}
-
-		// const tex = loader.load("/img/jpokan-2020/1.png", () => {
-		// 	addMesh();
-		// });
-
-		const slider = {
-			horizontal: { min: 0, max: 1 },
-			vertical: { min: 0, max: 1 },
-		};
 
 		manager.onProgress = function (url, itemsLoaded, itemsTotal) {
 			console.log(url, itemsLoaded, itemsTotal);
@@ -162,41 +167,7 @@ export default class Experience {
 
 		manager.onLoad = function () {
 			console.log("loaded all");
-			// startAnimations();
 		};
-
-		// function startAnimations() {
-		// 	gsap.to(camera.position, {
-		// 		z: 12,
-		// 		y: 0,
-		// 		x: 0,
-		// 		duration: 1.15,
-		// 		delay: 0.1,
-		// 	});
-
-		// 	gsap.to(shader.u_horizontal.value, {
-		// 		x: 0,
-		// 		y: 1,
-		// 		duration: 1.5,
-		// 	});
-		// 	gsap.to(shader.u_vertical.value, {
-		// 		x: 0,
-		// 		y: 1,
-		// 		duration: 1.5,
-		// 	});
-		// }
-		// for (let index = 0; index < names.length; index++) {
-		// 	const name = names[index];
-
-		// 	loader.load(`/img/${name}/1.png`, function (texture) {
-		// 		shadermaterial.map = texture;
-		// 		const box = new three.planegeometry(16, 9, 10);
-		// 		const mesh = new three.mesh(box, shadermaterial);
-		// 		mesh.position.z = -index;
-		// 		scene.add(mesh);
-		// 		meshes.push(mesh);
-		// 	});
-		// }
 
 		/**
 		 * Resizer
@@ -218,7 +189,6 @@ export default class Experience {
 		/**
 		 * Camera
 		 */
-
 		// Perspective Camera
 		const camera = new THREE.PerspectiveCamera(
 			75,
@@ -226,7 +196,7 @@ export default class Experience {
 			0.1,
 			100
 		);
-		camera.position.set(0, 0, 10);
+		camera.position.set(-20, 0, 50);
 
 		// Controls
 		const controls = new OrbitControls(camera, canvas);
@@ -246,20 +216,20 @@ export default class Experience {
 		renderer.outputColorSpace = THREE.LinearSRGBColorSpace;
 
 		// Clock
-		const clock = new THREE.Clock();
+		// const clock = new THREE.Clock();
 
 		/**
 		 * Animate
 		 */
 		const tick = () => {
-			fpsgraph.begin();
+			// fpsgraph.begin();
 
-			const delta = clock.getDelta();
+			// const delta = clock.getDelta();
 
-			if (parameters.animate) {
-				uniforms.u_time.value += delta;
-				pane.refresh();
-			}
+			// if (parameters.animate) {
+			// 	uniforms.u_time.value += delta;
+			// 	pane.refresh();
+			// }
 
 			// Update controls
 			controls.update();
@@ -267,7 +237,7 @@ export default class Experience {
 			// Render
 			renderer.render(scene, camera);
 
-			fpsgraph.end();
+			// fpsgraph.end();
 			// Call tick again on the next frame
 			requestAnimationFrame(tick);
 		};

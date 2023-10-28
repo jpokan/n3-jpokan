@@ -1,35 +1,15 @@
 <template>
-	<div></div>
+	<div class="h-screen p-[52px] fixed inset-0 grid place-items-center">
+	<div class="max-w-xl mx-auto bg-gray-100 pr-[104px] sm:pr-0 jpk-theme">
+		<p>A bit of space where I show my work and write my thoughts.</p>
+		<p>Go to <NuxtLink class="jpk-main-link" to="blog">/blog <IconsBlog class="fill-current w-4 inline-block"/></NuxtLink> to read about web stuff.</p>
+		<p>If you're interested in my work, you should look into the <NuxtLink class="jpk-main-link" to="lab">/lab <IconsLab class="fill-current w-4 mb-[2.3px] inline-block"/></NuxtLink> section.</p>
+	</div>
+	</div>
 </template>
 
 <script setup>
-import Experience from 'assets/experience.js'
-
-if (process.client) {
-	console.log('client');
 	useHead({
-		script: [
-			{
-				src: 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js',
-				onload: (e) => trigger(e)
-			},
-			{
-				src: 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/CustomEase.min.js',
-				onload: (e) => trigger(e)
-			}
-		]
+		title: 'Jpokan'
 	})
-}
-
-let libs = []
-
-function trigger(e) {
-	libs.push(e.timeStamp)
-	// Create Webgl experience after the scripts are loaded
-	if (libs.length === 2) {
-		console.log('head scripts loaded');
-		new Experience()
-	}
-}
-
 </script>
