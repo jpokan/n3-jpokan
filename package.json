@@ -10,12 +10,11 @@
 	"devDependencies": {
 		"@nuxt/content": "^2.8.1",
 		"@nuxtjs/color-mode": "^3.3.0",
-		"@nuxtjs/device": "^3.1.0",
 		"@nuxtjs/tailwindcss": "^6.8.0",
 		"@tailwindcss/typography": "^0.5.9",
 		"@tweakpane/plugin-essentials": "^0.2.0",
 		"@types/three": "^0.156.0",
-		"nuxt": "3.7.1",
+		"nuxt": "3.8.0",
 		"three": "^0.156.1",
 		"tweakpane": "^4.0.1"
 	},
