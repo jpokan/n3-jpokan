@@ -1,3 +1,3 @@
 <template>
-    <div>© 2023 - JPOKAN</div>
+    <div class="text-sm">© 2023 - JPOKAN</div>
 </template>

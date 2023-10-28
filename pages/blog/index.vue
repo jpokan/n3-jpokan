@@ -18,4 +18,7 @@ const { data: navigation } = await useAsyncData('navigation',
 	}
 )
 
+useHead({
+	title: 'Blog'
+})
 </script>

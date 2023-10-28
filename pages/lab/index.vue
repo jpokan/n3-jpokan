@@ -10,5 +10,10 @@
 definePageMeta({
 	layout: "lab",
 })
+
+useHead({
+	title: 'Lab'
+})
+
 const links = ['WEBGL', 'CONCEPTS', 'TOOLS', 'NOTES']
 </script>
