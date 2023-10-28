@@ -16,5 +16,8 @@ export default defineNuxtConfig({
 		navigation: {
 			fields: ['published']
 		}
-	}
+	},
+	ignore: [
+		'pages/#index.vue'
+	]
 })
