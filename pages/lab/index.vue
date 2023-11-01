@@ -1,8 +1,17 @@
 <template>
-	<div class="grid gap-5 grid-cols-4 font-bold font-satoshi">
-		<div class="border-b-2 border-solid border-zinc-700 dark:border-zinc-200" v-for="item in links" key="item">
-			{{ item }}
+	<div class="grid gap-5 lg:grid-cols-4 font-satoshi">
+		<ContentNavigation v-slot="{navigation}" :query="query">
+		<div v-for="item in navigation[0].children" key="item">
+			<div class="border-b-2 border-solid border-zinc-700 dark:border-zinc-200 font-semibold text-sm mb-5 uppercase">
+				{{ item.title }}
+			</div>
+			<ul>
+				<li v-for="i in item.children">
+					<a v-if="i.url" :href="i.url" target="_blank">{{ i.title }}</a>
+				</li>
+			</ul>
 		</div>
+		</ContentNavigation>
 	</div>
 </template>
 
@@ -15,5 +24,6 @@ useHead({
 	title: 'Lab'
 })
 
-const links = ['WEBGL', 'CONCEPTS', 'TOOLS', 'NOTES']
+const query = queryContent('lab')
 </script>
+
