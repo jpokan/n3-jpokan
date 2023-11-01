@@ -14,10 +14,10 @@ export default defineNuxtConfig({
 	},
 	content: {
 		navigation: {
-			fields: ['published']
+			fields: ['published', 'url']
 		}
 	},
-	ignore: [
-		'pages/#index.vue'
-	]
+	devtools: {
+		enabled: false
+	}
 })
