@@ -14,5 +14,38 @@
 	.jpk-main-link {
 		@apply bg-zinc-200 dark:bg-zinc-800 px-1;
 	}
+
+}
+
+@layer components {
+	.jpk-navbar:hover {
+		animation: show forwards;
+	}
+
+	.jpk-navbar {
+		animation: hide 900ms 3000ms forwards;
+	}
+
+	.jpk-navbar-none {
+		animation: show 0ms forwards;
+	}
+
+	@keyframes hide {
+		0% {
+			opacity: 1;
+		}
+		100% {
+			opacity: 0;
+		}
+	}
+
+	@keyframes show {
+		0% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+		}
+	}
 }
 

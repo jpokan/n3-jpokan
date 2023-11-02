@@ -26,36 +26,9 @@ const elements = shallowRef([
 ]);
 
 const route = useRoute()
+
 const isBlog = computed(()=>{
-	return route.meta.layout === 'blog'? 'jpk-navbar': ''
+	return route.meta.layout === 'blog'  ? 'sm:jpk-navbar-none jpk-navbar ': ''
 })
 </script>
-
-<style scoped>
-	.jpk-navbar:hover {
-		animation: show forwards;
-	}
-
-	.jpk-navbar {
-		animation: hide 900ms forwards 3000ms;
-	}
-
-	@keyframes hide {
-		0% {
-			opacity: 1;
-		}
-		100% {
-			opacity: 0;
-		}
-	}
-
-	@keyframes show {
-		0% {
-			opacity: 0;
-		}
-		100% {
-			opacity: 1;
-		}
-	}
-</style>
 
