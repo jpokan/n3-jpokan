@@ -1,6 +1,7 @@
 ---
 title: Creación de una página web
 published: true
+locale: ES
 ---
 
 >**Lectura recomendada para:** Personas que quieran tener presencia online a través de una página web.

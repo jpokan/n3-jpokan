@@ -14,7 +14,7 @@ export default defineNuxtConfig({
 	},
 	content: {
 		navigation: {
-			fields: ['published', 'url']
+			fields: ['published', 'url', 'locale']
 		}
 	},
 	devtools: {

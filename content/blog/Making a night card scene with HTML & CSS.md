@@ -1,6 +1,7 @@
 ---
 title: Making a night card scene with HTML & CSS
 published: true
+locale: EN
 ---
 
 Read this post or just fork this **[codepen](https://codepen.io/jpokan/pen/LYZqWpq)** and figure it out yourself 😂?
