@@ -1,3 +1,3 @@
 [submodule "content/lab/notes"]
 	path = content/lab/notes
-	url = https://github.com/jpokan/notes.git
+	url = git@github.com/jpokan/notes.git
