@@ -13,6 +13,7 @@ export default defineNuxtConfig({
 		classSuffix: ''
 	},
 	content: {
+		highlight: false,
 		navigation: {
 			fields: ['published', 'url', 'locale']
 		}
