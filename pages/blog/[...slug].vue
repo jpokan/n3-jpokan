@@ -9,13 +9,6 @@
 </template>
 
 <script setup>
-import '~/assets/css/prism-forest-light.css'
-import Prism from 'prismjs'
-
-onMounted(()=>{
-	Prism.highlightAll()
-})
-
 definePageMeta({
     layout: "blog",
 })
