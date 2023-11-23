@@ -3,7 +3,6 @@
 </template>
 
 <script setup>
-import '~/assets/css/prism-forest-light.css'
 import Prism from 'prismjs'
 
 const props = defineProps(['code', 'language', 'filename', 'highlights'])

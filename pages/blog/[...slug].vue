@@ -9,6 +9,8 @@
 </template>
 
 <script setup>
+import '~/assets/css/prism-forest-light.css'
+
 definePageMeta({
     layout: "blog",
 })
