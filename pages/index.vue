@@ -1,4 +1,5 @@
 <template>
+<div :class="{ 'grid place-items-center min-h-screen p-[52px] fixed inset-0' : !longbio }">
 <div class="max-w-[502px] mx-auto pr-[104px] sm:pr-0 jpk-theme">
 	<p class="text-6xl pb-2 font-medium">Hello!</p>
 	<p class="text-6xl pb-5 font-medium">I'm Jorge,</p>
@@ -7,7 +8,7 @@
 		<button @click="show" class="jpk-link bg-zinc-200 dark:bg-zinc-800 w-10 h-10 rounded-full transition-none">
 			<span v-if="longbio">-</span>
 			<span v-else>+</span>
-		<ReadMore class="absolute inset-0 mx-auto my-5 text-4xl font-normal w-20 h-20 -rotate-[40deg] tracking-wider hover:opacity-100 opacity-0 transition-opacity duration-300 rounded-full" />
+		<ReadMore class="absolute inset-0 mx-auto my-5 text-4xl font-normal rounded-full w-[5.4rem] h-[5.4rem] hover:-rotate-90 opacity-0 hover:opacity-100 tracking-wider transition duration-500" />
 		</button>
 	</div>
 	<div class="pb-5 h-full" v-show="longbio">
@@ -26,6 +27,7 @@
 	<NuxtLink class="jpk-main-link" to="lab">/lab
 		<IconsLab class="fill-current w-4 mb-[2.3px] inline-block" />
 	</NuxtLink> section.</p>
+</div>
 </div>
 </template>
 
