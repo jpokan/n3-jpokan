@@ -7,7 +7,7 @@
 			</div>
 			<ul>
 				<li v-for="i in item.children">
-					<a v-if="i.url" :href="i.url" target="_blank">{{ i.title }}</a>
+					<a class="jpk-link" v-if="i.url" :href="i.url" target="_blank">{{ i.title }}</a>
 				</li>
 			</ul>
 		</div>

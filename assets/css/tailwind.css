@@ -3,13 +3,13 @@
 @tailwind utilities;
 
 @layer base {
-    .jpk-link {
-        @apply hover:text-black dark:hover:text-white transition-colors duration-200;
-    }
+	.jpk-link {
+		@apply hover:text-black dark:hover:text-white transition-colors duration-200;
+	}
 
-    .jpk-theme {
-        @apply text-zinc-700 dark:text-zinc-200 bg-zinc-100 dark:bg-zinc-900;
-    }
+	.jpk-theme {
+		@apply text-zinc-700 dark:text-zinc-200 bg-zinc-100 dark:bg-zinc-900;
+	}
 
 	.jpk-main-link {
 		@apply bg-zinc-200 dark:bg-zinc-800 px-1;
