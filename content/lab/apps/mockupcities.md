@@ -1,6 +1,6 @@
 ---
 navigation:
-    title: mockupcities
+    title: Mockupcities
     url: https://mockupcities.com
 ---
 

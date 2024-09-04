@@ -1,5 +1,5 @@
 <template>
-	<div class="grid gap-5 lg:grid-cols-4 font-satoshi">
+	<div class="grid gap-5 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 font-satoshi">
 		<ContentNavigation v-slot="{navigation}" :query="query">
 		<div v-for="item in navigation[0].children" key="item">
 			<div class="border-b-2 border-solid border-zinc-700 dark:border-zinc-200 font-semibold text-sm mb-5 uppercase">
