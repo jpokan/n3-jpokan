@@ -1,6 +1,6 @@
 ---
 navigation:
-    title: vt-morph
+    title: Morph
     url: https://vt-morph.netlify.app
 ---
 

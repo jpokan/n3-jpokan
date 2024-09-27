@@ -1,6 +1,6 @@
 ---
 navigation:
-    title: danielchung
+    title: Daniel Chung
     url: https://danielchung.tech
 ---
 

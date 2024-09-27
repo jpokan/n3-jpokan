@@ -1,6 +1,6 @@
 ---
 navigation:
-    title: vt-attractor
+    title: Attractor
     url: https://vt-attractor.netlify.app
 ---
 

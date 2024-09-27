@@ -1,6 +1,6 @@
 ---
 navigation:
-    title: n3-plot
+    title: Plot
     url: https://n3-plot.netlify.app
 ---
 

@@ -1,6 +1,6 @@
 ---
 navigation:
-    title: vt-balls
+    title: Balls
     url: https://vt-balls.netlify.app
 ---
 

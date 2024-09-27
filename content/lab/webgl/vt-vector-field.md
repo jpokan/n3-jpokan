@@ -1,6 +1,6 @@
 ---
 navigation:
-    title: vt-vector-field
+    title: Vector Field
     url: https://vt-vector-field.netlify.app
 ---
 

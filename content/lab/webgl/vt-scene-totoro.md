@@ -1,6 +1,6 @@
 ---
 navigation:
-    title: vt-scene-totoro
+    title: Totoro Scene
     url: https://vt-scene-totoro.netlify.app
 ---
 

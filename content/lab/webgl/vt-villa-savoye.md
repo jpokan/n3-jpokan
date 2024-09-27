@@ -1,6 +1,6 @@
 ---
 navigation:
-    title: vt-villa-savoye
+    title: Villa Savoye
     url: https://vt-villa-savoye.netlify.app
 ---
 
