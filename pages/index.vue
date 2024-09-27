@@ -3,6 +3,7 @@
 		<p class="text-2xl pb-2 font-medium">Hello!</p>
 		<p class="text-6xl pb-5 font-medium">I'm Jorge,</p>
 		<p class="text-2xl">I build websites and tools related to architecture and design</p>
+		<p class="pt-5">Currently taking photos of Japan and studying Japanese</p>
 		<div class="py-10 text-center font-bold relative">
 			<button @click="show" class="jpk-link bg-zinc-200 dark:bg-zinc-800 w-10 h-10 rounded-full transition-none">
 				<span v-if="longbio">-</span>
@@ -12,29 +13,35 @@
 			</button>
 		</div>
 		<div class="pb-5 h-full" v-show="longbio">
-			<p class="font-medium">Frontend web developer</p>
-			<p class="pb-4">Degree in architecture and design</p>
-			<p>My stack:</p>
-			<ul
-			class="pb-4 font-medium">
-				<li>
-					Nuxt, Vue, Tailwind and Threejs
+			<p class="font-semibold uppercase pb-4">Frontend web developer</p>
+			<!-- <p class="pb-4">Self taught</p> -->
+			<p class="font-semibold uppercase pb-4">Photographer</p>
+			<!-- <p class="pb-4">Self taught</p> -->
+			<p class="font-semibold uppercase">architect & designer</p>
+			<p class="pb-4 dark:text-zinc-400">Degree in architecture and design</p>
+			<p class="dark:text-zinc-400" >Stack:</p>
+			<ul class="pb-4 font-semibold">
+				<li class="uppercase">
+					Nuxt / Vue / Tailwind / Threejs
 				</li>
-				<li>
-					Cloudflare, Netlify and Render
+				<li class="uppercase">
+					Cloudflare / Netlify / Render
 				</li>
 			</ul>
-			<p class="pb-4">I enjoy building and creating stuff, experimenting with new technologies, taking
-				pictures, travelling and designing.</p>
-			<p class="pb-4">Tools: Blender, AutoCAD, Rhino, Revit,
-					SketchUp, 3DS Max, Photoshop, Illustrator.</p>
-			<p class="pb-4">If you think you need a craftsman with my skills or have questions send me a message.</p>
-			<p>I can speak spanish, english, cantonese. Currently learning japanese.</p>
+			<p class="dark:text-zinc-400">Tools: </p>
+			<p class="pb-4 font-semibold uppercase">Blender / AutoCAD / Rhino / Revit /
+				SketchUp / Photoshop / Illustrator / Darktable</p>
+			<p class="dark:text-zinc-400">Gear: </p>
+			<p class="pb-4 font-semibold">CANON R6MKII / 16-35mm 2.8f EF USMIII / 50mm EF 1.4f / 50mm EF 1.8f / 70-200mm EF 4.0f</p>
+			<p class="dark:text-zinc-400">Interests: </p>
+			<p class="pb-4 uppercase font-semibold">creativity / tech / photography / travel / design / craft</p>
+			<p class="pb-4 dark:text-zinc-400">Need a craftsman with my skills? Send me a message.</p>
+			<p class="dark:text-zinc-400">I can speak spanish, english, cantonese. Currently learning japanese.</p>
 		</div>
-		<p>Go to <NuxtLink class="jpk-main-link" to="blog">/blog
+		<p class="dark:text-zinc-400">Go to <NuxtLink class="jpk-main-link" to="blog">/blog
 				<IconsBlog class="fill-current w-4 inline-block" />
 			</NuxtLink> to read about recent updates.</p>
-		<p>If you're interested in my work, you should look into the
+		<p class="dark:text-zinc-400" >If you're interested in my work, you should look into the
 			<NuxtLink class="jpk-main-link" to="lab">/lab
 				<IconsLab class="fill-current w-4 mb-[2.3px] inline-block" />
 			</NuxtLink> section.

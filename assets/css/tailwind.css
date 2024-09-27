@@ -12,7 +12,7 @@
 	}
 
 	.jpk-main-link {
-		@apply bg-zinc-200 dark:bg-zinc-800 px-1;
+		@apply bg-zinc-200 dark:bg-zinc-700 dark:text-zinc-200 px-1;
 	}
 
 }
