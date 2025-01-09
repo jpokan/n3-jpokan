@@ -1,7 +1,7 @@
 ---
 navigation:
     title: Sensoji Temple
-    location: JP
+    location: JP, Tokyo
     images: [
         'https://ik.imagekit.io/castles/JPOKAN/Sensoji%20Temple/2Z7A0294.webp?updatedAt=1727371094652',
         'https://ik.imagekit.io/castles/JPOKAN/Sensoji%20Temple/2Z7A0206.webp?updatedAt=1727371244457',

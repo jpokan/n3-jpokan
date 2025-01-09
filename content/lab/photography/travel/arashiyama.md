@@ -1,7 +1,7 @@
 ---
 navigation:
     title: Arashiyama Area
-    location: JP
+    location: JP, Kyoto
     images: [
         'https://ik.imagekit.io/castles/JPOKAN/Kyoto/Arashiyama%20Bamboo%20Forest%20/2Z7A0552.jpg?updatedAt=1736334668230',
         'https://ik.imagekit.io/castles/JPOKAN/Kyoto/Arashiyama%20Bamboo%20Forest%20/2Z7A0521.jpg?updatedAt=1736346407530',
