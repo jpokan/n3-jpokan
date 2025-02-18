@@ -6,8 +6,8 @@
 				<span class="text-zinc-300 dark:text-zinc-700 mr-3 font-bold ">{{ item.location }}</span>
 				<div class="jpk-link">{{ item.title }}</div>
 				<a :data-fancybox="`gallery-${index}`" :href="`${i}&tr=w-1920`" v-for="i in item.images">
-					<!-- thumbnail -->
-					<img :src="`${i}&tr=w-320`" class="object-cover">
+					<!-- thumbnail x2 150px - 300px -->
+					<img :src="`${i}&tr=w-300`" class="object-cover">
 				</a>
 			</div>
 		</div>
