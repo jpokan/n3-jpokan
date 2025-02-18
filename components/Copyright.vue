@@ -1,3 +1,3 @@
 <template>
-	<div>© 2023 - 2024 JPOKAN</div>
+	<div>© 2023 - 2025 JPOKAN</div>
 </template>
