@@ -32,7 +32,9 @@
 						</span>
 					</div>
 				</div>
-				<iframe v-show="!loading" :src="currentSite" @load="loaded" frameborder="0" class="h-full w-full"></iframe>
+				<iframe
+					sandbox="allow-same-origin allow-scripts allow-downloads"
+					v-show="!loading" :src="currentSite" @load="loaded" frameborder="0" class="h-full w-full"></iframe>
 			</div>
 		</div>
 	</div>

@@ -1,6 +1,6 @@
 ---
 navigation:
     title: Daniel Chung
-    url: https://danielchung.tech
+    url: https://n3-haaku.netlify.app/
 ---
 
