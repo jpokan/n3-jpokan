@@ -13,15 +13,15 @@
 							<NuxtLink class="jpk-sublink" v-if="i.i_url" :to="i.i_url">{{ i.title }}</NuxtLink>
 							<!-- external link -->
 							<!-- <a class="jpk-link relative" v-if="i.url" :href="i.url" target="_blank">{{ i.title }}<span class="text-xs absolute -right-4 top-0.5">↗</span></a> -->
-							<button @click="setURL(i.url)" :class="{ active: isActive(i.url) }" class="jpk-sublink" v-if="i.url">{{ i.title }}</button>
+							<button @click="setURL(i.url)" :class="{ 'dark:text-zinc-200 text-zinc-800': isActive(i.url) }" class="jpk-sublink" v-if="i.url">{{ i.title }}</button>
 						</li>
 					</ul>
 				</div>
 			</ContentNavigation>
 		</div>
 		<div class="sm:w-4/5 bottom-0 sticky sm:top-0 sm:h-screen h-96 py-5">
-			<div class="dark:border-zinc-200 border-zinc-800 border h-full w-full relative">
-				<div class="absolute inset-0 text-center -z-10">
+			<div class="dark:border-zinc-200 border-zinc-800 border h-full w-full relative bg-zinc-100 dark:bg-zinc-900">
+				<div v-if="!currentSite || loading" class="absolute inset-0 text-center">
 					<div class="h-full grid items-center">
 						<IconsLoader v-if="loading" class="w-12 mx-auto"/>
 						<span v-if="!currentSite" class="hidden sm:block">
@@ -32,7 +32,7 @@
 						</span>
 					</div>
 				</div>
-				<iframe v-show="!loading" :src="currentSite" @load="loaded" frameborder="0" class="h-full w-full bg-zinc-100 dark:bg-zinc-900"></iframe>
+				<iframe v-show="!loading" :src="currentSite" @load="loaded" frameborder="0" class="h-full w-full"></iframe>
 			</div>
 		</div>
 	</div>

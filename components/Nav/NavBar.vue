@@ -1,5 +1,5 @@
 <template>
-	<div :class="isBlog" class="fixed right-[52px] bottom-1/2 transform translate-y-1/2 sm:top-[52px] sm:translate-y-0 sm:h-[52px]">
+	<div :class="isBlog" class="fixed right-[52px] top-[52px] sm:top-[52px] sm:translate-y-0 sm:h-[52px]">
 		<div class="flex flex-col leading-none sm:flex-row text-center items-center p-4 gap-5">
 			<div v-for="item in elements" :key="item.title" class="h-5 w-5">
 				<NuxtLink v-if="item.type === 'text'" class="font-bold font-jost w-full h-full" :to="item.to"
