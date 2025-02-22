@@ -7,7 +7,9 @@
 				<div class="jpk-link">{{ item.title }}</div>
 				<a :data-fancybox="`gallery-${index}`" :href="`${i}&tr=w-1920`" v-for="i in item.images">
 					<!-- thumbnail x2 150px - 300px -->
-					<img :src="`${i}&tr=w-300`" class="object-cover">
+					<div class="aspect-[4/6] w-full">
+						<img v-lazy="{src:`${i}&tr=w-300`}" class="object-cover w-full">
+					</div>
 				</a>
 			</div>
 		</div>
