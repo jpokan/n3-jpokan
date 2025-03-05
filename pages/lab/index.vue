@@ -25,10 +25,10 @@
 					<div class="h-full grid items-center">
 						<IconsLoader v-if="loading" class="w-12 mx-auto"/>
 						<span v-if="!currentSite" class="hidden sm:block">
-							Click links on the left to display preview
+							Click links on the left to load preview
 						</span>
 						<span  v-if="!currentSite" class="sm:hidden">
-							Click links to display preview
+							Click links to load preview
 						</span>
 					</div>
 				</div>
@@ -57,8 +57,8 @@ function loaded() {
 	loading.value = false
 	console.log('loaded');
 }
-const isActive = (arg)=>{
-	return currentSite.value === arg 
+const isActive = (arg) => {
+	return currentSite.value === arg
 }
 function setURL(arg) {
 	loading.value = true
