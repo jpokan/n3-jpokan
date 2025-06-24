@@ -1,24 +1,25 @@
 <template>
-	<ContentNavigation v-slot="{ navigation }" :query="query">
-		<div class="text-sm font-medium uppercase pr-[104px] sm:pr-0">
-			<ul>
-				<li v-for="item in navigation[0].children[0].children" class="pb-5">
-					<span class="text-zinc-300 dark:text-zinc-700 mr-3 font-bold">{{ item.locale }}</span>
-					<NuxtLink class="jpk-link" :to="item._path">{{ item.title }}</NuxtLink>
-				</li>
-			</ul>
-		</div>
-	</ContentNavigation>
+	<div class="text-sm font-medium uppercase pr-[104px] sm:pr-0">
+		<ul>
+			<li v-for="item in data[0].children[2].children" class="pb-5">
+				<NuxtLink class="jpk-link" :to="item.path">
+					{{ item.title }}
+				</NuxtLink>
+			</li>
+		</ul>
+	</div>
 </template>
 
 <script setup>
-const query = queryContent('lab', 'photography')
+const { data } = await useAsyncData("lab-photography-navigation", () => {
+	return queryCollectionNavigation("lab", ["meta"]);
+});
 
 useHead({
-	title: 'Photography'
-})
+	title: "Photography",
+});
 
 definePageMeta({
 	layout: "photography",
-})
+});
 </script>

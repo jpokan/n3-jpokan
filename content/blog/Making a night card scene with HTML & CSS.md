@@ -66,9 +66,13 @@ To see the card better we will add a box shadow. I recommend using this **[https
 ```css
 .card {
 	position: relative;
-	box-shadow: 0 2.8px 3.8px rgba(0, 0, 0, 0.056), 0 6.7px 8.1px rgba(0, 0, 0, 0.081),
-		0 12.5px 13.3px rgba(0, 0, 0, 0.1), 0 22.3px 20.8px rgba(0, 0, 0, 0.119),
-		0 41.8px 35px rgba(0, 0, 0, 0.144), 0 100px 80px rgba(0, 0, 0, 0.2);
+	box-shadow:
+		0 2.8px 3.8px rgba(0, 0, 0, 0.056),
+		0 6.7px 8.1px rgba(0, 0, 0, 0.081),
+		0 12.5px 13.3px rgba(0, 0, 0, 0.1),
+		0 22.3px 20.8px rgba(0, 0, 0, 0.119),
+		0 41.8px 35px rgba(0, 0, 0, 0.144),
+		0 100px 80px rgba(0, 0, 0, 0.2);
 	width: var(--width);
 	height: var(--height);
 	border-radius: 10px;
@@ -141,9 +145,13 @@ Because the moon its a circle, we will add a border-radius of 100% to round the 
 	width: 20px;
 	height: 20px;
 	border-radius: 100%;
-	box-shadow: 0 2.8px 3.9px #a89587, 0 6.7px 9.3px #e2d5c5,
-		0 12.5px 17.5px #e2d5c5, 0 22.3px 31.3px #e2d5c5, 0 41.8px 58.5px #e2d5c5, 0
-			100px 140px #e2d5c5;
+	box-shadow:
+		0 2.8px 3.9px #a89587,
+		0 6.7px 9.3px #e2d5c5,
+		0 12.5px 17.5px #e2d5c5,
+		0 22.3px 31.3px #e2d5c5,
+		0 41.8px 58.5px #e2d5c5,
+		0 100px 140px #e2d5c5;
 }
 ```
 
@@ -204,8 +212,12 @@ We are almost there. We need the moon and the moonlight to be reflected on the w
 	width: 20px;
 	border-radius: 10px;
 	transform: rotateX(45deg);
-	box-shadow: 0 8.3px 52.7px #e2d5c5, 0 20px 89.4px #e2d5c5,
-		0 37.6px 116.2px #e2d5c5, 0 67px 140.6px #e2d5c5, 0 125.3px 177.2px #e2d5c5,
+	box-shadow:
+		0 8.3px 52.7px #e2d5c5,
+		0 20px 89.4px #e2d5c5,
+		0 37.6px 116.2px #e2d5c5,
+		0 67px 140.6px #e2d5c5,
+		0 125.3px 177.2px #e2d5c5,
 		0 300px 300px #e2d5c5;
 }
 ```

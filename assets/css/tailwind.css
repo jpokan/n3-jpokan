@@ -21,6 +21,25 @@
 		@apply bg-zinc-200 dark:bg-zinc-700 dark:text-zinc-200 px-1;
 	}
 
+	.grid-polka-2 {
+		background-color: transparent;
+		opacity: 1;
+		background-image:
+			radial-gradient(var(--color-old-zinc-600) 0.5px, transparent 0.5px),
+			radial-gradient(transparent 0.5px, transparent 0.5px);
+		background-size: 10px 10px;
+		background-position:
+			0 0,
+			10px 10px;
+	}
+
+	html.dark {
+		scrollbar-color: #9f9f9f #18181b;
+	}
+
+	html {
+		scrollbar-color: #a4a4a6 #f4f4f5;
+	}
 }
 
 @layer components {
@@ -54,4 +73,3 @@
 		}
 	}
 }
-

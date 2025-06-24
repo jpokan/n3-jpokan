@@ -1,22 +1,29 @@
 <template>
-	<PhotoGallery :query="query" :list="list" />
+	<PhotoGallery :list="posts" />
 </template>
 
 <script setup>
 import { Fancybox } from "@fancyapps/ui";
 import "@fancyapps/ui/dist/fancybox/fancybox.css";
 
-const route = useRoute()
+const route = useRoute();
+const { data: posts } = await useAsyncData(route.path, () => {
+	return queryCollection(route.params.slug[0]).all();
+});
+
+// const { data } = await useAsyncData("photography-navigation", () => {
+// 	return queryCollectionNavigation("photo").andWhere((query) =>
+// 		query.where("path", "IN", "lab").where("path", "<>", route.path)
+// 	);
+// });
+
+// console.log(data);
 
 useHead({
-	title: 'Photography/Architecture'
-})
+	title: `Photography/${route.params.slug[0]}`,
+});
 
-const query = queryContent(route.path)
-const navigation = await fetchContentNavigation(query)
-
-const posts = navigation[0].children[0].children[0].children
-const list = posts.filter((i) => i._path !== route.path)
+const list = posts.value.filter((i) => i.path !== route.path);
 
 onMounted(() => {
 	for (let i = 0; i < list.length; i++) {
@@ -24,11 +31,9 @@ onMounted(() => {
 			// Your custom options
 		});
 	}
-})
-
+});
 
 definePageMeta({
 	layout: "photography",
-})
-
+});
 </script>
