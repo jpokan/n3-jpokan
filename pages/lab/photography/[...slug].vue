@@ -23,9 +23,9 @@ useHead({
 	title: `Photography/${route.params.slug[0]}`,
 });
 
-const list = posts.value.filter((i) => i.path !== route.path);
-
 onMounted(() => {
+	const list = posts.value.filter((i) => i.path !== route.path);
+
 	for (let i = 0; i < list.length; i++) {
 		Fancybox.bind(`[data-fancybox="gallery-${i}"]`, {
 			// Your custom options
