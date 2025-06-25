@@ -20,34 +20,74 @@
 					class="w-10 h-10 mx-auto animate-spin text-zinc-500"
 				/>
 			</div>
-			<div class="h-full w-full p-10 z-10">
+			<TransitionGroup
+				enter-active-class="transition ease-out duration-500"
+				enter-from-class="opacity-0 translate-y-64 scale-95"
+				enter-to-class="opacity-100 translate-y-0 scale-100"
+				leave-active-class="transition ease-in duration-150"
+				leave-from-class="opacity-100 scale-100"
+				leave-to-class="opacity-0 scale-95"
+			>
 				<div
-					class="h-full grid gap-10 grid-cols-1 w-full overflow-y-auto overflow-x-hidden"
+					v-if="props.selected?.title"
+					:key="props.selected?.title"
+					class="h-full w-full p-10 z-10 text-zinc-800 dark:text-zinc-100"
 				>
-					<video
-						v-if="props.video"
-						@load="loading = false"
-						class="mx-auto w-full lg:max-w-[1070px]"
-						:src="props.video"
-						autoplay
-						loop
-					></video>
-					<img
-						@load="loading = false"
-						v-if="props.cover"
-						:src="props.cover"
-						class="mx-auto w-full lg:max-w-[900px]"
-					/>
+					<div
+						class="h-full grid grid-cols-1 w-full overflow-y-auto overflow-x-hidden scroll-smooth"
+					>
+						<video
+							id="video"
+							v-if="props.selected?.video"
+							@load="loading = false"
+							class="mx-auto w-full lg:max-w-[1070px]"
+							:key="props.selected?.video"
+							:src="props.selected?.video"
+							autoplay
+							loop
+						></video>
+						<h1
+							class="mt-16 mb-10 text-center font-bold font-jost text-5xl lg:text-7xl"
+						>
+							{{ props.selected?.title }}
+						</h1>
+						<p
+							v-if="props.selected?.description"
+							class="text-center mb-10"
+						>
+							{{ props.selected?.description }}
+						</p>
+						<img
+							id="image"
+							@load="loading = false"
+							v-if="props.selected?.cover"
+							:key="props.selected?.cover"
+							:src="props.selected?.cover"
+							class="mx-auto w-full lg:max-w-[900px]"
+						/>
+					</div>
 				</div>
-			</div>
+			</TransitionGroup>
 			<div
 				class="fixed mx-auto max-w-fit inset-x-0 bottom-5 flex gap-5 w-full justify-center"
 			>
+				<ModalButton @click="$emit('back')">
+					<IconsLeft class="w-4" />
+				</ModalButton>
+				<ModalButton @click="$emit('next')">
+					<IconsRight class="w-4" />
+				</ModalButton>
+				<ModalLink to="#image" v-if="props.selected?.cover">
+					<IconsImage class="w-4" />
+				</ModalLink>
+				<ModalLink to="#video" v-if="props.selected?.video">
+					<IconsVideo class="w-4" />
+				</ModalLink>
 				<NuxtLink
 					class="border dark:border-zinc-700 flex items-center rounded-full py-1.5 px-5 text-zinc-800 dark:text-zinc-100 bg-zinc-100 dark:bg-zinc-800"
 					target="_blank"
-					:to="props.url"
-					>{{ props.title }}
+					:to="props.selected?.url"
+					>{{ props.selected?.title }}
 					<svg
 						class="ml-1 w-4 h-4"
 						xmlns="http://www.w3.org/2000/svg"
@@ -63,21 +103,9 @@
 						/>
 					</svg>
 				</NuxtLink>
-				<button
-					@click="close"
-					class="h-10 w-10 p-2.5 border dark:border-zinc-700 text-zinc-800 dark:text-zinc-100 bg-zinc-100 dark:bg-zinc-800 hover:shadow-sm rounded-full"
-				>
-					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-						<path
-							fill="none"
-							stroke="currentColor"
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							stroke-width="1.5"
-							d="M18 6L6 18M6 6l12 12"
-						/>
-					</svg>
-				</button>
+				<ModalButton @click="close">
+					<IconsClose />
+				</ModalButton>
 			</div>
 		</dialog>
 	</Transition>
@@ -85,21 +113,9 @@
 
 <script setup>
 const props = defineProps({
-	video: {
-		type: String,
-		default: "",
-	},
-	title: {
-		type: String,
-		default: "",
-	},
-	url: {
-		type: String,
-		default: "",
-	},
-	cover: {
-		type: String,
-		default: "",
+	selected: {
+		type: Object,
+		default: {},
 	},
 });
 
@@ -124,8 +140,13 @@ function open() {
 	hide();
 }
 
+function next() {}
+function back() {}
+
 defineExpose({
 	open,
 	close,
+	next,
+	back,
 });
 </script>
