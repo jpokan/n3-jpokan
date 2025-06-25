@@ -1,6 +1,6 @@
 ---
 navigation:
-    title: archlogs
+    title: Archlogs
     url: https://archlogs.com
     description: Platform to share and curate architecture projects
     cover: https://ik.imagekit.io/castles/COVERS/archlogs.com_%20full.png?updatedAt=1750785498085

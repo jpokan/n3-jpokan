@@ -40,30 +40,21 @@ const { data } = await useAsyncData("lab-navigation", () => {
 	return queryCollectionNavigation("lab", ["meta"]);
 });
 
-const list = [];
-function makelist() {
-	for (let index = 0; index < data.value[0].children.length; index++) {
-		const element = data.value[0].children[index];
-		// console.log(element);
-		element.children.forEach((el) => {
-			if (el.stem.includes("index")) {
-				return;
-			}
-			list.push(el);
-		});
-	}
-}
-
-makelist();
+const { data: lab } = await useAsyncData("all-lab", () => {
+	return queryCollection("lab")
+		.where("path", "NOT LIKE", "/lab/photography/%")
+		.andWhere((query) => query.where("stem", "NOT LIKE", "%/%/index"))
+		.all();
+});
 
 const selected = ref({});
 const _index = ref(0);
 
 const preview = useTemplateRef("preview");
 function setPreview(item) {
-	const index = list.findIndex((e) => e.path === item.path);
+	const index = lab.value.findIndex((e) => e.path === item.path);
 	preview.value.open();
-	selected.value = item;
+	selected.value = lab.value[index];
 	_index.value = index;
 }
 
@@ -73,16 +64,16 @@ function back() {
 		return;
 	}
 	_index.value -= 1;
-	selected.value = list[_index.value];
+	selected.value = lab.value[_index.value];
 }
 
 function next() {
 	// check if is maximum length
-	if (_index.value === list.length - 1) {
+	if (_index.value === lab.value.length - 1) {
 		return;
 	}
 	_index.value += 1;
-	selected.value = list[_index.value];
+	selected.value = lab.value[_index.value];
 }
 useHead({
 	title: "Lab",

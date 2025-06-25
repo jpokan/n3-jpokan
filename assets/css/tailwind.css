@@ -21,24 +21,20 @@
 		@apply bg-zinc-200 dark:bg-zinc-700 dark:text-zinc-200 px-1;
 	}
 
-	.grid-polka-2 {
-		background-color: transparent;
-		opacity: 1;
-		background-image:
-			radial-gradient(var(--color-old-zinc-600) 0.5px, transparent 0.5px),
-			radial-gradient(transparent 0.5px, transparent 0.5px);
-		background-size: 10px 10px;
-		background-position:
-			0 0,
-			10px 10px;
+	.h-video {
+		height: calc(100svh - theme("spacing.20"));
 	}
 
 	html.dark {
+		/* overflow: overlay; */
 		scrollbar-color: #9f9f9f #18181b;
+		@apply bg-zinc-900;
 	}
 
 	html {
+		/* overflow: overlay; */
 		scrollbar-color: #a4a4a6 #f4f4f5;
+		@apply bg-zinc-100;
 	}
 }
 

@@ -10,5 +10,5 @@
 	"vue.format.template.initialIndent": true,
 	"prettier.tabWidth": 4,
 	"editor.wordWrapColumn": 120,
-	"prettier.quoteProps": "consistent"
+	"prettier.quoteProps": "consistent",
 }

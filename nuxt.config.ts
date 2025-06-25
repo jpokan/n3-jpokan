@@ -10,12 +10,16 @@ export default defineNuxtConfig({
 	colorMode: {
 		classSuffix: "",
 	},
-	// content: {
-	// 	highlight: false,
-	// 	navigation: {
-	// 		fields: ['published', 'url', 'locale']
-	// 	}
-	// },
+	content: {
+		build: {
+			markdown: {
+				highlight: {
+					// Theme used in all color schemes.
+					theme: "github-light",
+				},
+			},
+		},
+	},
 	devtools: {
 		enabled: false,
 	},

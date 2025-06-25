@@ -1,6 +1,6 @@
 ---
 navigation:
-    title: heywaffle
+    title: Heywaffle
     url: https://heywaffle.app
     description: An app to organize your life through widgets
     cover: https://ik.imagekit.io/castles/COVERS/heywaffle.app_%20full.png?updatedAt=1750785497954
