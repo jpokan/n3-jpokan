@@ -26,10 +26,10 @@
 				<div
 					v-if="props.selected.navigation?.title"
 					:key="props.selected.navigation?.title"
-					class="h-full w-full py-10 z-10 text-zinc-800 dark:text-zinc-100"
+					class="bg-transparent h-full w-full z-10 text-zinc-800 dark:text-zinc-100"
 				>
 					<div
-						class="scroll-none relative h-full w-full overflow-y-auto overflow-hidden scroll-smooth px-10"
+						class="scroll-none relative h-full w-full overflow-y-auto overflow-hidden scroll-smooth pt-10 pb-20 px-10"
 					>
 						<video
 							id="video"
