@@ -1,0 +1,8 @@
+{
+	"tabWidth": 4,
+	"semi": true,
+	"objectWrap": "preserve",
+	"bracketSameLine": true,
+	"useTabs": true,
+	"htmlWhitespaceSensitivity": "ignore"
+}
