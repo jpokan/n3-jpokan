@@ -3,11 +3,9 @@
 		ref="preview"
 		:selected="selected"
 		@next="next"
-		@back="back"
-	/>
+		@back="back" />
 	<div
-		class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 relative"
-	>
+		class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 relative">
 		<div v-for="item in data[0].children" key="item">
 			<div class="font-semibold text-sm mb-5 uppercase">
 				{{ item.title }}
@@ -21,8 +19,7 @@
 					<button
 						@click="setPreview(i)"
 						class="jpk-sublink"
-						v-if="i.url"
-					>
+						v-if="i.url">
 						{{ i.title }}
 					</button>
 				</li>
@@ -48,8 +45,7 @@ const { data: lab } = await useAsyncData("all-lab", () => {
 });
 
 const selected = ref({});
-const _index = ref(0);
-
+const _index = useState("prev-index", () => ref(0));
 const preview = useTemplateRef("preview");
 function setPreview(item) {
 	const index = lab.value.findIndex((e) => e.path === item.path);
@@ -58,11 +54,13 @@ function setPreview(item) {
 	_index.value = index;
 }
 
+const _loading = useState("prev-loading");
 function back() {
 	// check if is 0, don't go any less
 	if (_index.value === 0) {
 		return;
 	}
+	_loading.value = true;
 	_index.value -= 1;
 	selected.value = lab.value[_index.value];
 }
@@ -72,6 +70,7 @@ function next() {
 	if (_index.value === lab.value.length - 1) {
 		return;
 	}
+	_loading.value = true;
 	_index.value += 1;
 	selected.value = lab.value[_index.value];
 }

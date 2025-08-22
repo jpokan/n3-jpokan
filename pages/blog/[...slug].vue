@@ -1,8 +1,7 @@
 <template>
 	<article
 		v-if="page"
-		class="prose prose-zinc dark:prose-invert prose-a:no-underline prose-a:font-black prose-headings:uppercase prose-headings:font-semibold prose-h1:font-bold"
-	>
+		class="prose prose-zinc dark:prose-invert prose-a:no-underline prose-a:font-black prose-headings:uppercase prose-headings:font-semibold prose-h1:font-bold">
 		<h1 class="font-jost font-black uppercase text-5xl">
 			{{ page.title }}
 		</h1>
