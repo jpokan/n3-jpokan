@@ -23,4 +23,11 @@ export default defineNuxtConfig({
 	devtools: {
 		enabled: false,
 	},
+	runtimeConfig: {
+		public: {
+			posthogPublicKey: process.env.POSTHOG_PUBLIC_KEY,
+			posthogHost: "https://us.i.posthog.com",
+			posthogDefaults: "2025-05-24",
+		},
+	},
 });
