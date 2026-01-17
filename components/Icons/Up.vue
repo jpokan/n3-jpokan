@@ -1,12 +1,10 @@
 <template>
 	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 		<!-- Icon from Solar by 480 Design - https://creativecommons.org/licenses/by/4.0/ -->
-		<g fill="none" stroke="currentColor" stroke-width="1.5">
-			<circle cx="12" cy="12" r="10" />
-			<path
-				stroke-linecap="round"
-				stroke-linejoin="round"
-				d="m9 15l6-6m0 0h-4.5M15 9v4.5" />
-		</g>
+		<path
+			fill="currentColor"
+			fill-rule="evenodd"
+			d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2S2 6.477 2 12s4.477 10 10 10m.75-13a.75.75 0 0 0-1.5 0v2.25H9a.75.75 0 0 0 0 1.5h2.25V15a.75.75 0 0 0 1.5 0v-2.25H15a.75.75 0 0 0 0-1.5h-2.25z"
+			clip-rule="evenodd" />
 	</svg>
 </template>

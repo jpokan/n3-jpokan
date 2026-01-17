@@ -20,6 +20,7 @@
 			vpos="right-top"
 			size="2x2" />
 		<Box
+			link="/lab?preview=/lab/apps/heywaffle"
 			src="/img/compressed/heywaffle.webp"
 			vid="https://ik.imagekit.io/castles/VIDEO/cursorful-video-1750709895677.mp4?updatedAt=1750709982601"
 			title="Heywaffle"
@@ -27,6 +28,7 @@
 			position="left-top"
 			size="2x2" />
 		<Box
+			link="/lab?preview=/lab/apps/mockupcities"
 			vid="https://ik.imagekit.io/castles/VIDEO/cursorful-video-1750713205441.mp4?updatedAt=1750713233075"
 			title="Mockupcities"
 			description="A map customization tool that allows exporting the result as an image."
@@ -74,5 +76,12 @@
 		<Box
 			:vfull="true"
 			vid="https://ik.imagekit.io/castles/VIDEO/cursorful-video-1750763067979.mp4?updatedAt=1750763359929" />
+		<Box src="/" title="Art / Concepts" description="" size="1x2" />
+		<Box
+			description="A card scene made with html and css."
+			ipos="top"
+			size="2x2"
+			src="https://ik.imagekit.io/castles/COVERS/codepen.io_jpokan_full_LYZqWpq.png?updatedAt=1750785490408"
+			:vfull="true" />
 	</div>
 </template>

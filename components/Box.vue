@@ -69,8 +69,14 @@
 		<NuxtLink
 			v-if="link"
 			:to="link"
+			@click="swap"
 			class="w-4 h-4 absolute bottom-1 right-1 rounded-lg hover:bg-zinc-400 dark:hover:bg-zinc-500 dark:bg-zinc-700 bg-zinc-300">
-			<IconsUp class="text-zinc-100 dark:text-zinc-900" />
+			<IconsUp
+				v-if="!loadIcon"
+				class="text-zinc-100 dark:text-zinc-900" />
+			<IconsLoader
+				v-else
+				class="animate-spin text-zinc-100 dark:text-zinc-900" />
 		</NuxtLink>
 	</div>
 </template>
@@ -130,6 +136,11 @@ const vidRef = useTemplateRef("vidRef");
 const swapState = ref("");
 const initHeight = ref();
 const loaded = ref(false);
+const loadIcon = ref(false);
+
+function swap() {
+	loadIcon.value = true;
+}
 
 function play() {
 	try {
