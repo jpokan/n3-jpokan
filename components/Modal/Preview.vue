@@ -22,7 +22,7 @@
 					:key="props.selected.navigation?.title"
 					class="bg-transparent h-full w-full z-10 text-zinc-800 dark:text-zinc-100">
 					<div
-						class="scroll-none relative h-full w-full overflow-y-auto overflow-hidden scroll-smooth pt-10 pb-20 px-10">
+						class="scroll-none relative h-full w-full overflow-y-auto overflow-hidden flex flex-col gap-10 scroll-smooth pt-10 pb-20 px-10">
 						<div
 							v-if="props.selected.navigation?.video"
 							class="xl:h-video aspect-[1680/1080] xl:aspect-auto relative grid place-content-center w-full">
@@ -39,21 +39,25 @@
 								autoplay
 								loop></video>
 						</div>
+						<div
+							id="image"
+							v-if="props.selected.navigation?.cover"
+							:key="props.selected.navigation?.cover"
+							class="rounded-xl max-w-[900px] mx-auto">
+							<img
+								:src="props.selected.navigation?.cover"
+								class="rounded-xl"
+								alt="" />
+						</div>
 						<h1
-							class="mt-16 mb-10 h-fit text-center font-bold font-jost text-5xl lg:text-7xl">
+							class="h-fit text-center font-bold font-jost text-5xl lg:text-7xl">
 							{{ props.selected.navigation?.title }}
 						</h1>
 						<p
 							v-if="props.selected.navigation?.description"
-							class="text-center mb-10">
+							class="text-center">
 							{{ props.selected.navigation?.description }}
 						</p>
-						<img
-							id="image"
-							v-if="props.selected.navigation?.cover"
-							:key="props.selected.navigation?.cover"
-							:src="props.selected.navigation?.cover"
-							class="mx-auto w-full lg:max-w-[900px]" />
 						<div
 							id="info"
 							class="mx-auto w-full lg:max-w-[900px] prose prose-zinc dark:prose-invert prose-a:no-underline prose-a:font-black prose-headings:uppercase prose-headings:font-semibold prose-h1:font-bold">
@@ -117,10 +121,14 @@ const props = defineProps({
 });
 
 const isOpen = ref(false);
-// const loading = ref(true);
+
+const _loading = useState("prev-loading", () => ref(true));
+const _index = useState("prev-index", () => ref(0));
+const emit = defineEmits(["next", "back", "loaded", "close"]);
 
 function loaded() {
-	console.log("loaded");
+	console.log("loaded preview");
+	emit("loaded");
 	_loading.value = false;
 }
 
@@ -133,6 +141,7 @@ function unhide() {
 }
 
 function close() {
+	emit("close");
 	_loading.value = true;
 	isOpen.value = false;
 	unhide();
@@ -142,10 +151,6 @@ function open() {
 	isOpen.value = true;
 	hide();
 }
-
-const _loading = useState("prev-loading", () => ref(true));
-const _index = useState("prev-index", () => ref(0));
-const emit = defineEmits(["next", "back"]);
 function next() {
 	emit("next");
 }
@@ -162,6 +167,21 @@ defineExpose({
 
 onUnmounted(() => {
 	close();
+});
+
+const handleEscKey = (e) => {
+	if (e.key === "Escape") {
+		console.log("ESC pressed globally");
+		close();
+	}
+};
+
+onMounted(() => {
+	window.addEventListener("keydown", handleEscKey);
+});
+
+onBeforeUnmount(() => {
+	window.removeEventListener("keydown", handleEscKey);
 });
 </script>
 

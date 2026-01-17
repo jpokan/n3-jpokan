@@ -2,11 +2,12 @@
 	<ModalPreview
 		ref="preview"
 		:selected="selected"
+		@close="handleClose"
 		@next="next"
 		@back="back" />
 	<div
 		class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 relative">
-		<div v-for="item in data[0].children" key="item">
+		<div v-for="item in categories[0].children" key="item">
 			<div class="font-semibold text-sm mb-5 uppercase">
 				{{ item.title }}
 			</div>
@@ -15,11 +16,10 @@
 					<NuxtLink class="jpk-sublink" v-if="i.i_url" :to="i.i_url">
 						{{ i.title }}
 					</NuxtLink>
-
 					<button
-						@click="setPreview(i)"
-						class="jpk-sublink"
-						v-if="i.url">
+						v-if="i.url"
+						@click="setPreview(i.path)"
+						class="jpk-sublink">
 						{{ i.title }}
 					</button>
 				</li>
@@ -33,11 +33,11 @@ definePageMeta({
 	layout: "lab",
 });
 
-const { data } = await useAsyncData("lab-navigation", () => {
+const { data: categories } = await useAsyncData("lab-navigation", () => {
 	return queryCollectionNavigation("lab", ["meta"]);
 });
 
-const { data: lab } = await useAsyncData("all-lab", () => {
+const { data: projects } = await useAsyncData("all-lab", () => {
 	return queryCollection("lab")
 		.where("path", "NOT LIKE", "/lab/photography/%")
 		.andWhere((query) => query.where("stem", "NOT LIKE", "%/%/index"))
@@ -47,12 +47,47 @@ const { data: lab } = await useAsyncData("all-lab", () => {
 const selected = ref({});
 const _index = useState("prev-index", () => ref(0));
 const preview = useTemplateRef("preview");
-function setPreview(item) {
-	const index = lab.value.findIndex((e) => e.path === item.path);
-	preview.value.open();
-	selected.value = lab.value[index];
+const route = useRoute();
+const router = useRouter();
+
+function replaceQuery(path) {
+	router.replace({
+		query: {
+			...route.query,
+			preview: path,
+		},
+	});
+}
+
+function handleIndex(path) {
+	const index = findIndexByPath(path);
+	selected.value = projects.value[index];
 	_index.value = index;
 }
+
+function setPreview(path) {
+	handleIndex(path);
+	replaceQuery(path);
+	preview.value.open();
+}
+
+function findIndexByPath(path) {
+	const index = projects.value.findIndex((e) => e.path === path);
+	return index;
+}
+
+function handleClose() {
+	router.replace({
+		query: {},
+	});
+}
+
+onMounted(() => {
+	const queryPath = route.query?.preview;
+	if (queryPath) {
+		setPreview(queryPath);
+	}
+});
 
 const _loading = useState("prev-loading");
 function back() {
@@ -62,17 +97,19 @@ function back() {
 	}
 	_loading.value = true;
 	_index.value -= 1;
-	selected.value = lab.value[_index.value];
+	selected.value = projects.value[_index.value];
+	replaceQuery(selected.value.path);
 }
 
 function next() {
 	// check if is maximum length
-	if (_index.value === lab.value.length - 1) {
+	if (_index.value === projects.value.length - 1) {
 		return;
 	}
 	_loading.value = true;
 	_index.value += 1;
-	selected.value = lab.value[_index.value];
+	selected.value = projects.value[_index.value];
+	replaceQuery(selected.value.path);
 }
 useHead({
 	title: "Lab",
