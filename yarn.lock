@@ -426,10 +426,10 @@
   resolved "https://registry.yarnpkg.com/@esbuild/win32-x64/-/win32-x64-0.25.5.tgz#7fc114af5f6563f19f73324b5d5ff36ece0803d1"
   integrity sha512-TXv6YnJ8ZMVdX+SXWVBo/0p8LTcrUYngpWjvm91TMjjBQii7Oz11Lw5lbDV5Y0TzuhSJHwiH4hEtC1I42mMS0g==
 
-"@fancyapps/ui@^5.0.36":
-  version "5.0.36"
-  resolved "https://registry.yarnpkg.com/@fancyapps/ui/-/ui-5.0.36.tgz#dd5117cb579e9fc85c06dc32c947be6105724fb2"
-  integrity sha512-GMygQzp1MBTFNTT6AzpbL6pXTD6bTxwjmmpI1fe8Ozmmiseu8/g82Sudl1YhcbZmS4bJgaBOF5THDFGpXQ1fDw==
+"@fancyapps/ui@^6.1.8":
+  version "6.1.8"
+  resolved "https://registry.yarnpkg.com/@fancyapps/ui/-/ui-6.1.8.tgz#deeb0f14a7b16ae04336909be22a5baed47cc637"
+  integrity sha512-Hrk1MX25ZTybW8PCf47ZT9nqV2/ilnXUH4QtJXm3TxTKSLVi1nHcq6ZMmtXgl2zHLr4uphiw+1bOz9yL81iSHA==
 
 "@fastify/busboy@^3.1.1":
   version "3.1.1"

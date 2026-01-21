@@ -3,8 +3,9 @@
 		ref="target"
 		@mouseenter="toVid"
 		@mouseleave="toImg"
-		class="overflow-hidden transition hover:border-zinc-400 dark:hover:border-zinc-500 flex flex-col justify-between gap-5 p-5 relative mx-auto border border-zinc-300 dark:border-zinc-700 rounded-xl"
+		class="flex flex-col justify-between gap-5 p-5 relative mx-auto box-border"
 		:class="[
+			{ 'overflow-hidden': src && vid },
 			wh[size],
 			{ 'hover:bg-zinc-200/20 dark:hover:bg-black/50': bg },
 		]">
@@ -20,12 +21,12 @@
 				leave-to-class="opacity-0 translate-x-full"
 				leave-active-class="transition-all duration-200 ease-in">
 				<div
-					class="h-full rounded-md pattern-diagonal min-h-20"
+					class="h-full pattern-diagonal min-h-20"
 					v-if="src && swapState === 'img'">
 					<img
 						onerror="this.style.display='none'"
 						ref="imgRef"
-						class="rounded-md h-full object-cover"
+						class="h-full object-cover"
 						:class="[pos[ipos]]"
 						:src="src"
 						:alt="alt" />
@@ -46,7 +47,7 @@
 					<video
 						@loadeddata="handleLoaded"
 						ref="vidRef"
-						class="rounded-md object-cover w-full aspect-[1.56]"
+						class="object-cover w-full aspect-[1.56]"
 						:class="[
 							pos[vpos],
 							{ relative: swapState === 'img' },
@@ -70,7 +71,7 @@
 			v-if="link"
 			:to="link"
 			@click="swap"
-			class="w-4 h-4 absolute bottom-1 right-1 rounded-lg hover:bg-zinc-400 dark:hover:bg-zinc-500 dark:bg-zinc-700 bg-zinc-300">
+			class="transition w-4 h-4 absolute bottom-1 right-1 rounded-lg hover:bg-zinc-400 dark:hover:bg-zinc-500 dark:bg-zinc-700 bg-zinc-300">
 			<IconsUp
 				v-if="!loadIcon"
 				class="text-zinc-100 dark:text-zinc-900" />
@@ -104,21 +105,27 @@ const props = defineProps({
 	vfull: Boolean,
 	size: {
 		type: String,
-		default: "1x1",
+		default: "reset",
 	},
 });
 
 const wh = {
+	reset: "xl:max-w-[1260px] xl:max-h-[1260px]",
 	"1x1": "w-full xl:w-[300px] lg:col-span-2 xl:col-span-1",
 	"1x2": "w-full xl:w-[300px] lg:col-span-2 xl:col-span-1 lg:row-span-2",
 	"2x1": "w-full xl:w-[620px] lg:col-span-2 xl:col-span-2",
 	"2x2": "w-full xl:w-[620px] lg:col-span-2 xl:col-span-2 lg:row-span-2",
-	"3x2": "w-full xl:w-[940px] lg:row-span-3 xl:col-span-3",
+	"2x3": "w-full xl:w-[620px] lg:col-span-2 xl:col-span-2 xl:row-span-3",
+	"2x4": "w-full xl:w-[620px] lg:col-span-2 xl:col-span-2 xl:row-span-4",
+	"3x1": "w-full xl:w-[940px] xl:col-span-3",
+	"3x2": "w-full xl:w-[940px] xl:row-span-2 xl:col-span-3",
 	"4x1": "w-full xl:w-[1260px] lg:col-span-4 xl:col-span-4",
 	"4x2": "w-full xl:w-[1260px] xl:col-span-4 lg:row-span-2",
 };
 
 const pos = {
+	"contain-top": "!object-contain object-top",
+	"contain-center": "!object-contain object-center",
 	center: "object-center",
 	top: "object-top",
 	right: "object-right",
@@ -203,42 +210,4 @@ function handleLoaded() {
 }
 </script>
 
-<style>
-:is(.dark .pattern-dots) {
-	background-color: rgba(24, 24, 24, 0.5);
-	background-image:
-		radial-gradient(rgba(255, 255, 255, 0.5) 0.5px, transparent 0.5px),
-		radial-gradient(
-			rgba(255, 255, 255, 0.5) 0.5px,
-			rgba(24, 24, 24, 0.5) 0.5px
-		);
-	background-size: 20px 20px;
-	background-position:
-		0 0,
-		10px 10px;
-}
-
-:is(.dark .pattern-diagonal) {
-	background-color: rgba(24, 24, 24, 0.5);
-	background-image: repeating-linear-gradient(
-		45deg,
-		rgba(255, 255, 255, 0.3) 0,
-		rgba(255, 255, 255, 0.3) 1px,
-		rgba(24, 24, 24, 0.2) 0,
-		rgba(24, 24, 24, 0.2) 50%
-	);
-	background-size: 10px 10px;
-}
-
-.pattern-diagonal {
-	background-color: rgba(0, 0, 0, 0);
-	background-image: repeating-linear-gradient(
-		45deg,
-		rgba(24, 24, 24, 0.2) 0,
-		rgba(24, 24, 24, 0.2) 1px,
-		rgba(255, 255, 255, 0) 0,
-		rgba(255, 255, 255, 0) 50%
-	);
-	background-size: 10px 10px;
-}
-</style>
+<style></style>

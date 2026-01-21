@@ -3,24 +3,12 @@
 </template>
 
 <script setup>
-import { Fancybox } from "@fancyapps/ui";
+import { Fancybox } from "@fancyapps/ui/dist/fancybox/";
 import "@fancyapps/ui/dist/fancybox/fancybox.css";
 
 const route = useRoute();
 const { data: posts } = await useAsyncData(route.path, () => {
 	return queryCollection(route.params.slug[0]).all();
-});
-
-// const { data } = await useAsyncData("photography-navigation", () => {
-// 	return queryCollectionNavigation("photo").andWhere((query) =>
-// 		query.where("path", "IN", "lab").where("path", "<>", route.path)
-// 	);
-// });
-
-// console.log(data);
-
-useHead({
-	title: `Photography/${route.params.slug[0]}`,
 });
 
 onMounted(() => {
@@ -30,7 +18,18 @@ onMounted(() => {
 		Fancybox.bind(`[data-fancybox="gallery-${i}"]`, {
 			// Your custom options
 		});
+
+		// get #gallery-0 (9th item on hash) compare with index
+		// if (Number(route.hash[9]) === i) {
+		// 	Fancybox.show(`[data-fancybox="gallery-${i}"]`, {
+		// 		// Your custom options
+		// 	});
+		// }
 	}
+});
+
+useHead({
+	title: `Photography/${route.params.slug[0]}`,
 });
 
 definePageMeta({

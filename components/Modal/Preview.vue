@@ -33,7 +33,7 @@
 								:class="{ 'absolute invisible': _loading }"
 								@loadeddata="loaded"
 								id="video"
-								class="mx-auto h-fit xl:h-video rounded-xl"
+								class="mx-auto h-fit xl:h-video"
 								:key="props.selected.navigation?.video"
 								:src="props.selected.navigation?.video"
 								autoplay
@@ -43,10 +43,10 @@
 							id="image"
 							v-if="props.selected.navigation?.cover"
 							:key="props.selected.navigation?.cover"
-							class="rounded-xl max-w-[900px] mx-auto">
+							class="max-w-[900px] mx-auto">
 							<img
 								:src="props.selected.navigation?.cover"
-								class="rounded-xl"
+								class=""
 								alt="" />
 						</div>
 						<h1
