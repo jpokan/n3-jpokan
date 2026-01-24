@@ -7,7 +7,7 @@ export default defineNuxtPlugin((nuxtApp) => {
 		defaults: runtimeConfig.public.posthogDefaults,
 		person_profiles: "identified_only", // or 'always' to create profiles for anonymous users as well
 		loaded: (posthog) => {
-			if (import.meta.env.MODE === "development") posthog.debug();
+			// if (import.meta.env.MODE === "development") posthog.debug();
 		},
 	});
 

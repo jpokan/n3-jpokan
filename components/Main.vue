@@ -93,30 +93,9 @@
 			title="Wordpress"
 			description="Custom websites made with wordpress" />
 		<div
-			class="flex gap-5 xl:col-span-3 flex-row xl:max-w-[940px] p-5 box-border">
+			class="col-span-1 sm:col-span-4 xl:col-span-3 xl:max-w-[940px] p-5 box-border">
 			<CarouselWordpress class="" />
 		</div>
-		<!-- <Box src="/" size="1x1" description="" title="" /> -->
-		<!-- <Box class="relative w-full xl:col-span-4"></Box> -->
-		<!-- <Box -->
-		<!-- 	size="2x4" -->
-		<!-- 	title="Squidplot" -->
-		<!-- 	link="/lab?preview=/lab/wordpress/squidplot" -->
-		<!-- 	ipos="contain-top" -->
-		<!-- 	description="" -->
-		<!-- 	src="https://a.storyblok.com/f/98358/1903x5549/684464ed28/1597218933023.png" /> -->
-		<!-- <Box -->
-		<!-- 	size="1x1" -->
-		<!-- 	link="/lab?preview=/lab/wordpress/ve-arquitectura" -->
-		<!-- 	ipos="contain-center" -->
-		<!-- 	title="Ve arquitectura" -->
-		<!-- 	description="" -->
-		<!-- 	src="https://a.storyblok.com/f/98358/1246x1829/ba4d047db2/ve-arquitectura.png" /> -->
-		<!-- <Box -->
-		<!-- 	title="Jorge Alberto Ayllon" -->
-		<!-- 	ipos="contain-center" -->
-		<!-- 	size="1x1" -->
-		<!-- 	src="https://a.storyblok.com/f/98358/1263x1725/65170c8e23/jorgealbertoayllon-com_-laptop-with-mdpi-screen.png" /> -->
 		<Box
 			size="4x1"
 			src="/"
@@ -141,10 +120,13 @@
 			src="https://ik.imagekit.io/castles/JPOKAN/t4/IMG_2159.JPG?updatedAt=1768866868415"
 			size="1x1" />
 		<Box
+			link="/lab?preview=/lab/architecture/w6"
+			title="Studio 6"
 			ipos="contain-center"
 			src="https://ik.imagekit.io/castles/JPOKAN/t6/PANEL%202.webp"
 			size="3x1" />
 		<Box
+			link="/lab?preview=/lab/architecture/w4#cerro-azul"
 			ipos="center"
 			size="1x1"
 			src="https://ik.imagekit.io/castles/JPOKAN/t4/IMG_2042.webp?updatedAt=1768866869087"
@@ -157,7 +139,7 @@
 			id="t9"
 			src="https://ik.imagekit.io/castles/JPOKAN/t9/PROPUESTA%2010.3-A1%20-%20NIVEL%201.webp"
 			size="3x2" />
-		<Box src="/" size="1x1" title="" />
+		<Box src="/" size="1x1" title="Cultural center" />
 		<Box size="4x1" src="/" title="Photography" description="" />
 		<Box
 			id="fujimi"

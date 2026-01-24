@@ -50,12 +50,13 @@ const preview = useTemplateRef("preview");
 const route = useRoute();
 const router = useRouter();
 
-function replaceQuery(path) {
+function replaceQuery(path, hash) {
 	router.replace({
 		query: {
 			...route.query,
 			preview: path,
 		},
+		hash: hash,
 	});
 }
 
@@ -65,9 +66,9 @@ function handleIndex(path) {
 	_index.value = index;
 }
 
-function setPreview(path) {
+function setPreview(path, hash) {
 	handleIndex(path);
-	replaceQuery(path);
+	replaceQuery(path, hash);
 	preview.value.open();
 }
 
@@ -84,8 +85,9 @@ function handleClose() {
 
 onMounted(() => {
 	const queryPath = route.query?.preview;
+	const queryHash = route.hash;
 	if (queryPath) {
-		setPreview(queryPath);
+		setPreview(queryPath, queryHash);
 	}
 });
 

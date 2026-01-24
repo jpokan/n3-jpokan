@@ -60,7 +60,7 @@
 						</p>
 						<div
 							id="info"
-							class="mx-auto w-full lg:max-w-[900px] prose prose-zinc dark:prose-invert prose-a:no-underline prose-a:font-black prose-headings:uppercase prose-headings:font-semibold prose-h1:font-bold">
+							class="mx-auto w-full lg:max-w-[900px] prose-img:m-0 prose prose-zinc dark:prose-invert prose-a:no-underline prose-a:font-black prose-headings:uppercase prose-headings:font-semibold prose-h1:font-bold">
 							<ContentRenderer
 								:prose="true"
 								:value="props.selected?.body" />

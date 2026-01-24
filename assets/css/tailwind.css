@@ -3,20 +3,18 @@
 @tailwind utilities;
 
 @layer base {
-	.jpk-sublink {
-		@apply hover:text-black text-zinc-400 dark:hover:text-white dark:text-zinc-500 transition-colors duration-200;
+	.jpk-theme {
+		@apply text-zinc-700 dark:text-zinc-200 bg-zinc-100 dark:bg-zinc-900;
 	}
 	.jpk-tools {
 		@apply pb-4 dark:text-zinc-600 text-zinc-400 uppercase;
 	}
+	.jpk-sublink {
+		@apply hover:text-black text-zinc-400 dark:hover:text-white dark:text-zinc-500 transition-colors duration-200;
+	}
 	.jpk-link {
 		@apply hover:text-black dark:hover:text-white transition-colors duration-200;
 	}
-
-	.jpk-theme {
-		@apply text-zinc-700 dark:text-zinc-200 bg-zinc-100 dark:bg-zinc-900;
-	}
-
 	.jpk-main-link {
 		@apply bg-zinc-200 dark:bg-zinc-700 dark:text-zinc-200 px-1;
 	}
@@ -110,4 +108,71 @@
 		rgba(255, 255, 255, 0) 50%
 	);
 	background-size: 10px 10px;
+}
+
+/* .f-thumbs { */
+/* 	--f-thumbs-padding-y: 0px; */
+/* 	--f-thumbs-padding-x: 0px; */
+/* 	--f-thumbs-gap: 10px; */
+/* 	--f-thumb-width: 100px; */
+/* 	--f-thumb-selected-shadow: none; */
+/* 	--f-thumb-border-radius: 0; */
+/* 	--f-thumb-opacity: 0.5; */
+/* 	--f-thumb-selected-opacity: 1; */
+/* } */
+
+#f-container {
+	/* 	--f-thumbs-padding-y: 0px; */
+	/* display: grid; */
+	/* grid-template-columns: 1fr 112px; */
+	/* grid-auto-flow: column; */
+	/* max-width: 100%; */
+	/* margin: 0 auto; */
+}
+
+#f-carousel {
+	/* --f-carousel-gap: 0px; */
+	/* --f-carousel-slide-width: 100%; */
+
+	/* --f-arrow-pos: 10px; */
+	/* --f-arrow-width: 38px; */
+	/* --f-arrow-height: 38px; */
+	/* --f-arrow-svg-width: 16px; */
+	/* --f-arrow-svg-height: 16px; */
+	/* --f-arrow-svg-stroke-width: 2.5; */
+	/* --f-arrow-color: #475569; */
+	/* --f-arrow-shadow: */
+	/* 	0 6px 12px -2px rgb(50 50 93 / 25%), 0 3px 7px -3px rgb(0 0 0 / 30%); */
+	/* --f-arrow-border-radius: 50%; */
+	/* --f-arrow-bg: #fff; */
+	/* --f-arrow-hover-bg: #f9f9f9; */
+	/* --f-arrow-active-bg: #f0f0f0; */
+
+	/* order: 1; */
+}
+
+/* #f-carousel .f-carousel__slide { */
+/* 	display: flex; */
+/* 	align-items: center; */
+/* 	justify-content: center; */
+/* 	cursor: pointer; */
+/* } */
+
+#carousel-post {
+	--f-carousel-slide-height: 100%;
+	--f-carousel-gap: 0px;
+
+	height: 620px;
+}
+
+#carousel-post .f-carousel__slide {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+}
+
+#carousel-post .f-carousel__slide img {
+	max-width: 100%;
+	height: auto;
 }
