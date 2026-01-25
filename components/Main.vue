@@ -3,14 +3,14 @@
 		class="grid gap-5 grid-cols-1 sm:grid-cols-4 mx-auto w-fit overflow-hidden md:max-w-[620px] lg:max-w-[940px] xl:max-w-[1260px] row-flow-dense">
 		<div
 			class="fixed z-50 left-0 bottom-0 h-5 w-5 m-4 sm:bg-zinc-500 md:bg-red-500 lg:bg-zinc-500 xl:bg-zinc-800"></div>
-		<Box class="col-span-4 border-none pb-28 text-6xl">
+		<Box class="col-span-4 border-none pb-28 text-4xl sm:text-6xl">
 			<p class="">
 				Building digital experiences with architectural thinking and
 				design precision
 			</p>
 		</Box>
 		<Box class="col-span-4 lg:col-span-2">
-			<Hero class="p-16" />
+			<Hero class="p-5 sm:p-16" />
 		</Box>
 		<Box
 			class="col-span-4 lg:col-span-2 lg:row-span-2"
@@ -130,7 +130,7 @@
 			imgFit="contain"
 			src="https://ik.imagekit.io/castles/JPOKAN/planos-de-obra/planos%20de%20obra%202014-38.webp?updatedAt=1769293236948" />
 		<Box
-			link="/lab?preview=/lab/architecture/"
+			link="/lab?preview=/lab/architecture/w1"
 			class="col-span-4 sm:col-span-2 md:col-span-1"
 			description="Design Studio 01"
 			ipos="center"
@@ -140,11 +140,11 @@
 			class="col-span-4 sm:col-span-2 md:col-span-1"
 			description="Design Studio 02"
 			ipos="left"
-			link="/lab?preview=/lab/architecture/fulgione"
+			link="/lab?preview=/lab/architecture/w2"
 			imgFit="cover"
 			src="https://ik.imagekit.io/castles/JPOKAN/t2/IMG_0665.webp?updatedAt=1768889535200" />
 		<Box
-			link="/lab?preview=/lab/architecture/"
+			link="/lab?preview=/lab/architecture/w3"
 			class="col-span-4 sm:col-span-2 md:col-span-1"
 			description="Design Studio 03"
 			ipos="center"
@@ -172,14 +172,15 @@
 			imgAspect="10/7"
 			src="https://ik.imagekit.io/castles/JPOKAN/t6/PANEL%202.webp" />
 		<Box
+			link="/lab?preview=/lab/architecture/w7"
 			class="col-span-4 sm:col-span-2 md:col-span-1"
-			link="Fortuname"
 			imgFit="cover"
 			description="Design Studio 07"
 			src="https://ik.imagekit.io/castles/JPOKAN/t7/panel%20merged.webp?updatedAt=1768892477569" />
 		<Box
 			class="col-span-4 sm:col-span-2 md:col-span-1"
 			description="Design Studio 09"
+			link="/lab?preview=/lab/architecture/w9"
 			imgFit="contain"
 			imgAspect="4000/5664"
 			ipos="center"
