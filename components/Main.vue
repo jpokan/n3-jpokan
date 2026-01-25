@@ -118,16 +118,19 @@
 			imgAspect="4000/2825"
 			ipos="center"
 			imgFit="cover"
+			link="/lab?preview=/lab/architecture/fulgione"
 			description="Intership work"
 			class="col-span-4 sm:col-span-2 md:col-span-2"
 			src="https://ik.imagekit.io/castles/JPOKAN/practice/sucre/bprincipal/20141222%20-%20BA%C3%91O%20PRINCIPAL%20(PARQUE)%20A3%20BP-01.webp?updatedAt=1769293074262" />
 		<Box
 			class="col-span-4 sm:col-span-2 md:col-span-1"
+			link="/lab?preview=/lab/architecture/details"
 			description="Detail drawings"
 			ipos="center"
 			imgFit="contain"
 			src="https://ik.imagekit.io/castles/JPOKAN/planos-de-obra/planos%20de%20obra%202014-38.webp?updatedAt=1769293236948" />
 		<Box
+			link="/lab?preview=/lab/architecture/"
 			class="col-span-4 sm:col-span-2 md:col-span-1"
 			description="Design Studio 01"
 			ipos="center"
@@ -137,9 +140,11 @@
 			class="col-span-4 sm:col-span-2 md:col-span-1"
 			description="Design Studio 02"
 			ipos="left"
+			link="/lab?preview=/lab/architecture/fulgione"
 			imgFit="cover"
 			src="https://ik.imagekit.io/castles/JPOKAN/t2/IMG_0665.webp?updatedAt=1768889535200" />
 		<Box
+			link="/lab?preview=/lab/architecture/"
 			class="col-span-4 sm:col-span-2 md:col-span-1"
 			description="Design Studio 03"
 			ipos="center"
@@ -168,6 +173,7 @@
 			src="https://ik.imagekit.io/castles/JPOKAN/t6/PANEL%202.webp" />
 		<Box
 			class="col-span-4 sm:col-span-2 md:col-span-1"
+			link="Fortuname"
 			imgFit="cover"
 			description="Design Studio 07"
 			src="https://ik.imagekit.io/castles/JPOKAN/t7/panel%20merged.webp?updatedAt=1768892477569" />
@@ -185,6 +191,7 @@
 			src="https://ik.imagekit.io/castles/JPOKAN/t9/IMG_0298.webp?updatedAt=1768860877441" />
 		<Box src="/" title="Photography" description="" />
 		<Box
+			class="col-span-4 sm:col-span-4 md:col-span-1"
 			src="https://ik.imagekit.io/castles/JPOKAN/travel/Kyoto/Fushimi%20Inari%20Taisha/2Z7A0024_01.jpg?updatedAt=1736779973930&tr=w-1920"
 			title=""
 			description=""
