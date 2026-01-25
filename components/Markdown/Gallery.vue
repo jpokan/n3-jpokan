@@ -1,7 +1,7 @@
 <template>
-	<div class="grid grid-cols-2 gap-5">
+	<FancyBox class="grid grid-cols-2 gap-5">
 		<MarkdownImage v-for="item in links" :key="item" :src="item" />
-	</div>
+	</FancyBox>
 </template>
 
 <script setup>

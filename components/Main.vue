@@ -120,7 +120,7 @@
 			imgFit="cover"
 			description="Intership work"
 			class="col-span-4 sm:col-span-2 md:col-span-2"
-			src="https://ik.imagekit.io/castles/JPOKAN/practice/20150409%20-%20DELICASS%20CHACARILLA%20imprimir%20MUNI%20A1%20A-01.webp?updatedAt=1769060024345" />
+			src="https://ik.imagekit.io/castles/JPOKAN/practice/sucre/bprincipal/20141222%20-%20BA%C3%91O%20PRINCIPAL%20(PARQUE)%20A3%20BP-01.webp?updatedAt=1769293074262" />
 		<Box
 			class="col-span-4 sm:col-span-2 md:col-span-1"
 			description="Detail drawings"
