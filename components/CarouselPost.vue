@@ -1,6 +1,7 @@
 <template>
 	<div class="grid grid-cols-[1fr,110px] grid-flow-row">
 		<Carousel
+			:delay="200"
 			:carousel-options="options"
 			id="carousel-post"
 			class="f-carousel">
@@ -8,7 +9,7 @@
 				class="f-carousel__slide"
 				:data-thumb-src="i"
 				v-for="i in links">
-				<img class="f-panzoom__content" :src="i" alt="" />
+				<img :data-lazy-src="i" class="f-panzoom__content" alt="" />
 			</div>
 		</Carousel>
 	</div>
@@ -24,19 +25,11 @@ const props = defineProps({
 
 const options = {
 	Toolbar: {
+		absolute: true,
 		display: {
 			left: [],
-			middle: [
-				"zoomIn",
-				"zoomOut",
-				"toggle1to1",
-				"rotateCCW",
-				"rotateCW",
-				"flipX",
-				"flipY",
-				"reset",
-			],
-			right: ["fullscreen"],
+			middle: ["zoomIn", "zoomOut", "fullscreen"],
+			right: [""],
 		},
 	},
 	Thumbs: {
@@ -47,12 +40,12 @@ const options = {
 	},
 	Autoplay: {
 		autoStart: false,
-		pauseOnHover: true,
+		// pauseOnHover: true,
 		timeout: 5000,
 	},
 	style: {
 		"--f-progressbar-color": "rgba(200,200,200,1)",
-		"--f-progressbar-height": "2px",
+		"--f-progressbar-height": "5px",
 	},
 };
 </script>

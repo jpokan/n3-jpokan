@@ -1,6 +1,9 @@
 <template>
 	<div class="">
-		<img :src="props.src" alt="" />
+		<img
+			class="aspect-[3/2] object-cover object-center"
+			:src="props.src"
+			alt="" />
 		<slot></slot>
 	</div>
 </template>

@@ -3,7 +3,7 @@
 		ref="target"
 		@mouseenter="toVid"
 		@mouseleave="toImg"
-		class="flex flex-col justify-between gap-5 p-5 relative mx-auto box-border"
+		class="flex flex-col justify-between gap-5 p-5 relative mx-auto box-border w-full"
 		:class="[
 			{ 'overflow-hidden': src && vid },
 			wh[size],
@@ -24,10 +24,11 @@
 					class="h-full pattern-diagonal min-h-20"
 					v-if="src && swapState === 'img'">
 					<img
+						:style="imgStyle"
 						onerror="this.style.display='none'"
+						class="h-full w-full"
 						ref="imgRef"
-						class="h-full object-cover"
-						:class="[pos[ipos]]"
+						:class="[pos[ipos], aspects[imgAspect], fit[imgFit]]"
 						:src="src"
 						:alt="alt" />
 				</div>
@@ -41,14 +42,16 @@
 				leave-active-class="transition-all duration-200 ease-in">
 				<div
 					v-if="vid && swapState === 'vid'"
-					class="h-full"
+					class="h-full w-ful"
 					:class="[{ 'p-5 absolute inset-x-0 top-0': src }]">
 					<LoaderLine :class="[{ invisible: loaded }]" class="mx-5" />
 					<video
 						@loadeddata="handleLoaded"
 						ref="vidRef"
-						class="object-cover w-full aspect-[1.56]"
+						class="w-full"
 						:class="[
+							aspects[vAspect],
+							fit[vFit],
 							pos[vpos],
 							{ relative: swapState === 'img' },
 							{ '!object-center h-full': vfull },
@@ -70,7 +73,7 @@
 		<NuxtLink
 			v-if="link"
 			:to="link"
-			@click="swap"
+			@click="goToLink"
 			class="transition w-4 h-4 absolute bottom-1 right-1 rounded-lg hover:bg-zinc-400 dark:hover:bg-zinc-500 dark:bg-zinc-700 bg-zinc-300">
 			<IconsUp
 				v-if="!loadIcon"
@@ -103,6 +106,17 @@ const props = defineProps({
 	src: String,
 	alt: String,
 	vfull: Boolean,
+	imgStyle: String,
+	imgAspect: String,
+	imgFit: String,
+	vFit: {
+		type: String,
+		default: "cover",
+	},
+	vAspect: {
+		type: String,
+		default: "aspect-[14/9]",
+	},
 	size: {
 		type: String,
 		default: "reset",
@@ -110,7 +124,7 @@ const props = defineProps({
 });
 
 const wh = {
-	reset: "xl:max-w-[1260px] xl:max-h-[1260px]",
+	reset: "col-span-4",
 	"1x1": "w-full xl:w-[300px] lg:col-span-2 xl:col-span-1",
 	"1x2": "w-full xl:w-[300px] lg:col-span-2 xl:col-span-1 lg:row-span-2",
 	"2x1": "w-full xl:w-[620px] lg:col-span-2 xl:col-span-2",
@@ -123,9 +137,32 @@ const wh = {
 	"4x2": "w-full xl:w-[1260px] xl:col-span-4 lg:row-span-2",
 };
 
+const fit = {
+	contain: "object-contain",
+	cover: "object-cover",
+	fill: "object-fill",
+	none: "object-none",
+};
+
+const aspects = {
+	"1/1": "aspect-[1/1]",
+	"1/2": "aspect-[1/2]",
+	"2/1": "aspect-[2/1]",
+	"2/3": "aspect-[2/3]",
+	"3/2": "aspect-[3/2]",
+	"3/4": "aspect-[3/4]",
+	"4/3": "aspect-[4/3]",
+	"4/5": "aspect-[4/5]",
+	"5/4": "aspect-[5/4]",
+	"10/7": "aspect-[10/7]",
+	"14/9": "aspect-[14/9]",
+	"16/10": "aspect-[16/10]",
+	"1680/1080": "aspect-[1680/1080]",
+	"4000/2825": "aspect-[4000/2825]",
+	"4000/5664": "aspect-[4000/5664]",
+};
+
 const pos = {
-	"contain-top": "!object-contain object-top",
-	"contain-center": "!object-contain object-center",
 	center: "object-center",
 	top: "object-top",
 	right: "object-right",
@@ -145,8 +182,12 @@ const initHeight = ref();
 const loaded = ref(false);
 const loadIcon = ref(false);
 
-function swap() {
+function goToLink() {
 	loadIcon.value = true;
+	setTimeout(() => {
+		// resets the icon
+		loadIcon.value = false;
+	}, 3000);
 }
 
 function play() {
@@ -183,8 +224,8 @@ onBeforeUnmount(() => {
 
 function toVid(e) {
 	console.log("in");
-	// set box initial box height
-	if (props.src) {
+	// set box initial box height only if src and vid exists
+	if (props.src && props.vid) {
 		initHeight.value = `${imgRef.value.offsetHeight}px`;
 	}
 	if (props.vid) {

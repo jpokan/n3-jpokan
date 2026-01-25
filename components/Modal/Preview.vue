@@ -1,9 +1,9 @@
 <template>
 	<Transition
-		enter-active-class="transition ease-out duration-300"
+		enter-active-class="transition ease-out duration-200"
 		enter-from-class="opacity-0 scale-95"
 		enter-to-class="opacity-100 scale-100"
-		leave-active-class="transition ease-in duration-200"
+		leave-active-class="transition ease-in duration-100"
 		leave-from-class="opacity-100 scale-100"
 		leave-to-class="opacity-0 scale-95">
 		<dialog
@@ -11,10 +11,10 @@
 			class="w-full dark:bg-zinc-900 bg-zinc-100 z-50 fixed h-full inset-0"
 			open>
 			<TransitionGroup
-				enter-active-class="transition ease-out duration-500"
+				enter-active-class="transition ease-out duration-200"
 				enter-from-class="opacity-0 translate-y-64 scale-95"
 				enter-to-class="opacity-100 translate-y-0 scale-100"
-				leave-active-class="transition ease-in duration-150"
+				leave-active-class="transition ease-in duration-100"
 				leave-from-class="opacity-100 scale-100"
 				leave-to-class="opacity-0 scale-95">
 				<div
@@ -25,7 +25,7 @@
 						class="scroll-none relative h-full w-full overflow-y-auto overflow-hidden flex flex-col gap-10 scroll-smooth pt-10 pb-20 px-10">
 						<div
 							v-if="props.selected.navigation?.video"
-							class="xl:h-video aspect-[1680/1080] xl:aspect-auto relative grid place-content-center w-full">
+							class="xl:h-video aspect-[1680/1080] relative grid place-content-center w-full">
 							<IconsLoader
 								v-if="_loading"
 								class="w-10 animate-spin h-fit mx-auto xl:h-video"></IconsLoader>
@@ -40,13 +40,13 @@
 								loop></video>
 						</div>
 						<div
-							id="image"
+							id="previewImage"
 							v-if="props.selected.navigation?.cover"
 							:key="props.selected.navigation?.cover"
-							class="max-w-[900px] mx-auto">
+							class="xl:h-video relative">
 							<img
 								:src="props.selected.navigation?.cover"
-								class=""
+								class="mx-auto xl:h-video object-contain max-h-[h-video] aspect-[5/3]"
 								alt="" />
 						</div>
 						<h1
@@ -69,7 +69,7 @@
 				</div>
 			</TransitionGroup>
 			<div
-				class="fixed bottom-5 px-5 lg:px-5 flex gap-4 w-full justify-between flex-wrap">
+				class="fixed bottom-5 px-5 lg:px-5 flex gap-4 w-full justify-between flex-wrap z-20">
 				<div class="flex gap-4">
 					<ModalButton @click="back">
 						<IconsLeft class="w-4" />
@@ -80,7 +80,7 @@
 				</div>
 				<div class="flex gap-4 flex-wrap">
 					<ModalLink
-						to="#image"
+						to="#previewImage"
 						v-if="props.selected.navigation?.cover">
 						<IconsImage class="w-4" />
 					</ModalLink>

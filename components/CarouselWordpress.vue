@@ -1,8 +1,10 @@
 <template>
-	<div class="flex flex-row">
-		<Carousel :carousel-options="options" class="">
+	<div class="">
+		<Carousel
+			:carousel-options="options"
+			class="h-auto overflow-y-auto max-h-[620px]">
 			<div
-				class="f-carousel__slide !overflow-y-auto !max-h-[620px]"
+				class="f-carousel__slide"
 				:data-thumb-src="i"
 				v-for="i in links">
 				<img class="object-cover object-top top-0" :src="i" alt="" />
@@ -19,17 +21,14 @@ const links = [
 ];
 
 const options = {
+	adaptiveHeight: true,
 	Thumbs: {
 		type: "classic",
-		Carousel: {
-			vertical: true,
-		},
+		// Carousel: {
+		// 	vertical: true,
+		// },
 		thumbTpl:
 			'<button  aria-label="Slide to #{{page}}"><img style="object-position: top;" draggable="false" alt="{{alt}}" data-lazy-src="{{src}}" /></button>',
-	},
-	Autoplay: {
-		pauseOnHover: true,
-		timeout: 5000,
 	},
 	style: {
 		"--f-progressbar-color": "rgba(200,200,200,1)",

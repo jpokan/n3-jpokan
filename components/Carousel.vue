@@ -35,6 +35,7 @@ import "@fancyapps/ui/dist/carousel/carousel.fullscreen.css";
 export default {
 	props: {
 		carouselOptions: Object,
+		delay: Number,
 	},
 	setup() {
 		const fcInstance = ref(null);
@@ -43,22 +44,33 @@ export default {
 			fcInstance,
 		};
 	},
+	methods: {
+		createCarousel: function () {
+			this.fcInstance = Carousel(
+				this.$refs.container,
+				{
+					...(this.carouselOptions || {}),
+				},
+				{
+					// Arrows,
+					// Toolbar,
+					// Autoplay,
+					Thumbs,
+					// Zoomable,
+					// Lazyload,
+					// Fullscreen,
+				},
+			).init();
+		},
+	},
 	mounted() {
-		this.fcInstance = Carousel(
-			this.$refs.container,
-			{
-				...(this.carouselOptions || {}),
-			},
-			{
-				// Arrows,
-				Toolbar,
-				Autoplay,
-				Thumbs,
-				Zoomable,
-				Lazyload,
-				Fullscreen,
-			},
-		).init();
+		if (this.delay !== 0) {
+			setTimeout(() => {
+				this.createCarousel();
+			}, this.delay);
+		} else {
+			this.createCarousel();
+		}
 	},
 	unmounted() {
 		if (this.fcInstance) {
