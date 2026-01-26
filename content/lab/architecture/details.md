@@ -1,8 +1,8 @@
 ---
 navigation:
-    title: Details
+    title: Detail drawings
     url: /lab/architecture/details
-    description: Various drawings
+    description:
     cover: ""
     video: ""
 ---
