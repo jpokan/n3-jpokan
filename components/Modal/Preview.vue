@@ -50,7 +50,7 @@
 								alt="" />
 						</div>
 						<h1
-							class="h-fit text-center font-bold font-jost text-5xl lg:text-7xl">
+							class="h-fit text-center font-black font-jost text-5xl lg:text-7xl">
 							{{ props.selected.navigation?.title }}
 						</h1>
 						<p
