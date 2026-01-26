@@ -46,7 +46,7 @@
 							class="xl:h-video relative">
 							<img
 								:src="props.selected.navigation?.cover"
-								class="mx-auto xl:h-video object-contain max-h-[h-video] aspect-[5/3]"
+								class="mx-auto lg:object-contain w-full max-w-[940px]"
 								alt="" />
 						</div>
 						<h1

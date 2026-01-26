@@ -106,7 +106,7 @@
 			class="col-span-4 xl:col-span-1"
 			src="/"
 			title="Wordpress"
-			description="Custom websites made with wordpress" />
+			description="Custom websites made with wordpress for various clients" />
 		<Box class="col-span-1 lg:col-span-4 xl:col-span-3 xl:max-w-[940px]">
 			<CarouselWordpress class="" />
 		</Box>
@@ -119,74 +119,74 @@
 			ipos="center"
 			imgFit="cover"
 			link="/lab?preview=/lab/architecture/fulgione"
-			description="Intership work"
-			class="col-span-4 sm:col-span-2 md:col-span-2"
+			description="Work under Fulgione & Chavez SAC"
+			class="col-span-4 sm:col-span-2 md:col-span-4 lg:col-span-2"
 			src="https://ik.imagekit.io/castles/JPOKAN/practice/sucre/bprincipal/20141222%20-%20BA%C3%91O%20PRINCIPAL%20(PARQUE)%20A3%20BP-01.webp?updatedAt=1769293074262" />
 		<Box
-			class="col-span-4 sm:col-span-2 md:col-span-1"
+			class="col-span-4 sm:col-span-2 md:col-span-2 lg:col-span-1"
 			link="/lab?preview=/lab/architecture/details"
 			description="Detail drawings"
 			ipos="center"
 			imgFit="contain"
 			src="https://ik.imagekit.io/castles/JPOKAN/planos-de-obra/planos%20de%20obra%202014-38.webp?updatedAt=1769293236948" />
 		<Box
-			link="/lab?preview=/lab/architecture/w1"
-			class="col-span-4 sm:col-span-2 md:col-span-1"
+			link="/lab?preview=/lab/architecture/w01"
+			class="col-span-4 sm:col-span-2 lg:col-span-1"
 			description="Design Studio 01"
 			ipos="center"
 			imgFit="cover"
 			src="https://ik.imagekit.io/castles/JPOKAN/t1/DSCN5687.webp?updatedAt=1768892311716" />
 		<Box
-			class="col-span-4 sm:col-span-2 md:col-span-1"
+			class="col-span-4 sm:col-span-2 lg:col-span-2"
 			description="Design Studio 02"
 			ipos="left"
-			link="/lab?preview=/lab/architecture/w2"
+			link="/lab?preview=/lab/architecture/w02"
 			imgFit="cover"
 			src="https://ik.imagekit.io/castles/JPOKAN/t2/IMG_0665.webp?updatedAt=1768889535200" />
 		<Box
-			link="/lab?preview=/lab/architecture/w3"
-			class="col-span-4 sm:col-span-2 md:col-span-1"
+			link="/lab?preview=/lab/architecture/w03"
+			class="col-span-4 sm:col-span-2 lg:col-span-1"
 			description="Design Studio 03"
 			ipos="center"
 			imgFit="cover"
 			src="https://ik.imagekit.io/castles/JPOKAN/t3/IMG_1241.webp?updatedAt=1769085547359" />
 		<Box
-			link="/lab?preview=/lab/architecture/w4"
-			description="Design Studio 04 - Hotel Bolivar"
-			class="col-span-4 sm:col-span-2 md:col-span-1"
-			ipos="center"
-			imgFit="cover"
-			src="https://ik.imagekit.io/castles/JPOKAN/t4/IMG_2170.webp?updatedAt=1768866869342" />
-		<Box
-			class="col-span-4 sm:col-span-2 md:col-span-1"
-			link="/lab?preview=/lab/architecture/w4"
+			class="col-span-4 sm:col-span-2 lg:col-span-1"
+			link="/lab?preview=/lab/architecture/w04"
 			description="Design Studio 04 - Hotel Cerro Azul"
 			ipos="center"
 			imgFit="cover"
 			src="https://ik.imagekit.io/castles/JPOKAN/t4/IMG_2042.webp?updatedAt=1768866869087" />
 		<Box
-			class="col-span-4 sm:col-span-2 md:col-span-1"
-			link="/lab?preview=/lab/architecture/w6"
+			link="/lab?preview=/lab/architecture/w04"
+			description="Design Studio 04 - Hotel Bolivar"
+			class="col-span-4 sm:col-span-2 lg:col-span-1 xl:col-span-2"
+			ipos="center"
+			imgFit="cover"
+			src="https://ik.imagekit.io/castles/JPOKAN/t4/IMG_2170.webp?updatedAt=1768866869342" />
+		<Box
+			class="col-span-4 sm:col-span-2 lg:col-span-2"
+			link="/lab?preview=/lab/architecture/w06"
 			description="Design Studio 06"
 			imgFit="cover"
 			imgAspect="10/7"
 			src="https://ik.imagekit.io/castles/JPOKAN/t6/PANEL%202.webp" />
 		<Box
-			link="/lab?preview=/lab/architecture/w7"
-			class="col-span-4 sm:col-span-2 md:col-span-1"
+			link="/lab?preview=/lab/architecture/w07"
+			class="col-span-4 sm:col-span-2 lg:col-span-1"
 			imgFit="cover"
 			description="Design Studio 07"
 			src="https://ik.imagekit.io/castles/JPOKAN/t7/panel%20merged.webp?updatedAt=1768892477569" />
 		<Box
-			class="col-span-4 sm:col-span-2 md:col-span-1"
+			class="col-span-4 sm:col-span-2 md:col-span-2 lg:col-span-1"
 			description="Design Studio 09"
-			link="/lab?preview=/lab/architecture/w9"
+			link="/lab?preview=/lab/architecture/w09"
 			imgFit="contain"
 			imgAspect="4000/5664"
 			ipos="center"
 			src="https://ik.imagekit.io/castles/JPOKAN/t9/PANEL%20FINAL.webp?updatedAt=1769096769162" />
 		<Box
-			class="col-span-4 sm:col-span-2 md:col-span-1"
+			class="col-span-4 sm:col-span-2 lg:col-span-2"
 			ipos="center"
 			imgFit="cover"
 			src="https://ik.imagekit.io/castles/JPOKAN/t9/IMG_0298.webp?updatedAt=1768860877441" />

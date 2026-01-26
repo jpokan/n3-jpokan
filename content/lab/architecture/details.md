@@ -3,7 +3,7 @@ navigation:
     title: Detail drawings
     url: /lab/architecture/details
     description:
-    cover: ""
+    cover: "https://ik.imagekit.io/castles/JPOKAN/planos-de-obra/planos%20de%20obra%202014-35.webp?updatedAt=1769293237282"
     video: ""
 ---
 
