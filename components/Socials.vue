@@ -1,5 +1,6 @@
 <template>
-	<footer class="flex flex-col text-right text-xs font-semibold font-satoshi h-[52px]">
+	<footer
+		class="flex flex-col text-right text-xs font-semibold font-satoshi h-[52px]">
 		<div v-for="item in links" key="item">
 			<NuxtLink class="jpk-link" :to="item.link">
 				{{ item.text }}
@@ -10,9 +11,8 @@
 
 <script setup>
 const links = [
-	{ link: 'mailto:contact@jpokan.com', text: 'EMAIL' },
-	{ link: 'https://twitter.com/jpokan', text: 'TWITTER' },
-	{ link: 'https://github.com/jpokan', text: 'GITHUB' },
-]
+	{ link: "mailto:contact@jpokan.com", text: "EMAIL" },
+	{ link: "https://x.com/jpokan", text: "X" },
+	{ link: "https://github.com/jpokan", text: "GITHUB" },
+];
 </script>
-
