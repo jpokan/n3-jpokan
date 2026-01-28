@@ -25,15 +25,15 @@
 						class="scroll-none relative h-full w-full overflow-y-auto overflow-hidden flex flex-col gap-10 scroll-smooth pt-10 pb-20 px-10">
 						<div
 							v-if="props.selected.navigation?.video"
-							class="xl:h-video aspect-[1680/1080] relative grid place-content-center w-full">
+							class="lg:h-video aspect-[1680/1080] relative grid place-content-center w-full">
 							<IconsLoader
 								v-if="_loading"
-								class="w-10 animate-spin h-fit mx-auto xl:h-video"></IconsLoader>
+								class="w-10 animate-spin h-fit mx-auto lg:h-video"></IconsLoader>
 							<video
 								:class="{ 'absolute invisible': _loading }"
 								@loadeddata="loaded"
 								id="video"
-								class="mx-auto h-fit xl:h-video"
+								class="mx-auto h-fit lg:h-video"
 								:key="props.selected.navigation?.video"
 								:src="props.selected.navigation?.video"
 								autoplay
@@ -43,7 +43,7 @@
 							id="previewImage"
 							v-if="props.selected.navigation?.cover"
 							:key="props.selected.navigation?.cover"
-							class="xl:h-video relative">
+							class="">
 							<img
 								:src="props.selected.navigation?.cover"
 								class="mx-auto lg:object-contain w-full max-w-[940px]"

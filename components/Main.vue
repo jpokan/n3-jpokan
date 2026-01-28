@@ -95,7 +95,7 @@
 			:vfull="true"
 			vid="https://ik.imagekit.io/castles/VIDEO/cursorful-video-1750763067979.mp4?updatedAt=1750763359929" />
 		<Box
-			class="col-span-4 md:col-span-2 lg:col-span-1"
+			class="col-span-4 sm:col-span-2 lg:col-span-1"
 			link="/lab?preview=/lab/concepts/card"
 			description="A css & html card scene."
 			imgAspect="2/3"
@@ -107,10 +107,11 @@
 			src="/"
 			title="Wordpress"
 			description="Custom websites made with wordpress for various clients" />
-		<Box class="col-span-1 lg:col-span-4 xl:col-span-3 xl:max-w-[940px]">
+		<Box class="col-span-4 xl:col-span-3 xl:max-w-[940px]">
 			<CarouselWordpress class="" />
 		</Box>
 		<Box
+			class="col-span-4"
 			src="/"
 			title="Architecture"
 			description="Models, drafts, drawings and more..." />
@@ -190,7 +191,7 @@
 			ipos="center"
 			imgFit="cover"
 			src="https://ik.imagekit.io/castles/JPOKAN/t9/IMG_0298.webp?updatedAt=1768860877441" />
-		<Box src="/" title="Photography" description="" />
+		<Box class="col-span-4" src="/" title="Photography" description="" />
 		<Box
 			class="col-span-4 sm:col-span-4 md:col-span-1"
 			src="https://ik.imagekit.io/castles/JPOKAN/travel/Kyoto/Fushimi%20Inari%20Taisha/2Z7A0024_01.jpg?updatedAt=1736779973930&tr=w-1920"
