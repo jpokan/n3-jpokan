@@ -43,10 +43,10 @@
 							id="previewImage"
 							v-if="props.selected.navigation?.cover"
 							:key="props.selected.navigation?.cover"
-							class="">
+							class="w-full max-w-xl mx-auto">
 							<img
 								:src="props.selected.navigation?.cover"
-								class="mx-auto max-w-xl lg:object-contain"
+								class="mx-auto lg:object-contain"
 								alt="" />
 						</div>
 						<h1
@@ -60,7 +60,7 @@
 						</p>
 						<div
 							id="info"
-							class="mx-auto max-w-xl prose-img:m-0 prose prose-zinc dark:prose-invert prose-a:no-underline prose-a:font-black prose-headings:uppercase prose-headings:font-semibold prose-h1:font-bold">
+							class="mx-auto w-full max-w-xl prose-img:m-0 prose prose-zinc dark:prose-invert prose-a:no-underline prose-a:font-black prose-headings:uppercase prose-headings:font-semibold prose-h1:font-bold">
 							<ContentRenderer
 								:prose="true"
 								:value="props.selected?.body" />
