@@ -6,7 +6,6 @@
 		class="flex flex-col justify-between gap-5 p-5 relative mx-auto box-border w-full"
 		:class="[
 			{ 'overflow-hidden': src && vid },
-			wh[size],
 			{ 'hover:bg-zinc-200/20 dark:hover:bg-black/50': bg },
 		]">
 		<div
@@ -117,25 +116,7 @@ const props = defineProps({
 		type: String,
 		default: "aspect-[14/9]",
 	},
-	size: {
-		type: String,
-		default: "reset",
-	},
 });
-
-const wh = {
-	reset: "col-span-4",
-	"1x1": "w-full xl:w-[300px] lg:col-span-2 xl:col-span-1",
-	"1x2": "w-full xl:w-[300px] lg:col-span-2 xl:col-span-1 lg:row-span-2",
-	"2x1": "w-full xl:w-[620px] lg:col-span-2 xl:col-span-2",
-	"2x2": "w-full xl:w-[620px] lg:col-span-2 xl:col-span-2 lg:row-span-2",
-	"2x3": "w-full xl:w-[620px] lg:col-span-2 xl:col-span-2 xl:row-span-3",
-	"2x4": "w-full xl:w-[620px] lg:col-span-2 xl:col-span-2 xl:row-span-4",
-	"3x1": "w-full xl:w-[940px] xl:col-span-3",
-	"3x2": "w-full xl:w-[940px] xl:row-span-2 xl:col-span-3",
-	"4x1": "w-full xl:w-[1260px] lg:col-span-4 xl:col-span-4",
-	"4x2": "w-full xl:w-[1260px] xl:col-span-4 lg:row-span-2",
-};
 
 const fit = {
 	contain: "object-contain",
