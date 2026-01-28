@@ -46,11 +46,11 @@
 							class="">
 							<img
 								:src="props.selected.navigation?.cover"
-								class="mx-auto lg:object-contain w-full max-w-[940px]"
+								class="mx-auto max-w-xl lg:object-contain"
 								alt="" />
 						</div>
 						<h1
-							class="h-fit text-center font-black font-jost text-5xl lg:text-7xl">
+							class="h-fit text-center font-black font-jost text-5xl">
 							{{ props.selected.navigation?.title }}
 						</h1>
 						<p
@@ -60,7 +60,7 @@
 						</p>
 						<div
 							id="info"
-							class="mx-auto w-full lg:max-w-[900px] prose-img:m-0 prose prose-zinc dark:prose-invert prose-a:no-underline prose-a:font-black prose-headings:uppercase prose-headings:font-semibold prose-h1:font-bold">
+							class="mx-auto max-w-xl prose-img:m-0 prose prose-zinc dark:prose-invert prose-a:no-underline prose-a:font-black prose-headings:uppercase prose-headings:font-semibold prose-h1:font-bold">
 							<ContentRenderer
 								:prose="true"
 								:value="props.selected?.body" />
