@@ -106,9 +106,9 @@
 			class="border-none col-span-4 xl:col-span-1"
 			src="/"
 			title="Wordpress"
-			description="Custom websites made with wordpress for various clients" />
+			description="" />
 		<Box
-			description="Design and implementation of wordpress landing pages with Elementor website builder. Customization of css, scripts, plugins, integrations, etc."
+			description="Design and implementation of wordpress landing pages. Customization of css, scripts, plugins and other integrations."
 			class="col-span-4 xl:col-span-3 xl:max-w-[940px]">
 			<CarouselWordpress class="" />
 		</Box>
@@ -204,5 +204,10 @@
 			title=""
 			description=""
 			link="/lab/photography/travel" />
+		<Box
+			class="border-none col-span-4 text-center text-zinc-300 dark:text-zinc-600"
+			description="Developed using various open source tools like Nuxt, Vue, TailwindCSS and more...">
+			<IconsShield class="mx-auto w-5 text-center" />
+		</Box>
 	</div>
 </template>
