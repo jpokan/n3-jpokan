@@ -1,8 +1,7 @@
 <template>
 	<div
 		class="grid gap-5 grid-cols-1 sm:grid-cols-4 mx-auto w-fit overflow-hidden md:max-w-[620px] lg:max-w-[940px] xl:max-w-[1260px] row-flow-dense">
-		<div
-			class="fixed z-50 left-0 bottom-0 h-5 w-5 m-4 sm:bg-zinc-500 md:bg-red-500 lg:bg-zinc-500 xl:bg-zinc-800"></div>
+		<NavDebug />
 		<Box class="col-span-4 border-none pb-28 text-4xl sm:text-6xl">
 			<p class="">
 				Building digital experiences with architectural thinking and
@@ -109,7 +108,7 @@
 			description="" />
 		<Box
 			description="Design and implementation of wordpress landing pages. Customization of css, scripts, plugins and other integrations."
-			class="col-span-4 xl:col-span-3 xl:max-w-[940px]">
+			class="col-span-4 xl:col-span-3 xl:max-w-[940px] relative">
 			<CarouselWordpress class="" />
 		</Box>
 		<Box
@@ -199,15 +198,21 @@
 			title="Photography"
 			description="" />
 		<Box
-			class="col-span-4 sm:col-span-4 md:col-span-1"
+			class="col-span-4 sm:col-span-2 md:col-span-2"
 			src="https://ik.imagekit.io/castles/JPOKAN/travel/Kyoto/Fushimi%20Inari%20Taisha/2Z7A0024_01.jpg?updatedAt=1736779973930&tr=w-1920"
-			title=""
-			description=""
+			link="/lab/photography/travel" />
+		<Box
+			class="col-span-4 sm:col-span-2 md:col-span-2"
+			src="https://ik.imagekit.io/castles/JPOKAN/architecture/Asakusa%20Culture%20Tourist%20Information%20Center/2Z7A0176.webp?updatedAt=1736780032160&tr=w-1920"
+			link="/lab/photography/architecture" />
+		<Box
+			class="col-span-4 sm:col-span-4 md:col-span-2"
+			src="https://ik.imagekit.io/castles/JPOKAN/travel/Tokyo/Yabusame/2Z7A1581_result.webp"
 			link="/lab/photography/travel" />
 		<Box
 			class="border-none col-span-4 text-center text-zinc-300 dark:text-zinc-600"
 			description="Developed using various open source tools like Nuxt, Vue, TailwindCSS and more...">
-			<IconsShield class="mx-auto w-5 text-center" />
+			<IconsShield class="mx-auto w-4 text-center" />
 		</Box>
 	</div>
 </template>

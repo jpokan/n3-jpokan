@@ -7,7 +7,7 @@ navigation:
     video: https://ik.imagekit.io/castles/VIDEO/cursorful-video-1750709895677.mp4?updatedAt=1750709982601
 ---
 
-HeyWaffle.app is a web project made in collaboration with Daniel Chung. A digital tools can help people organize their daily lives in a more visual and interactive way. The platform is designed around the idea of an intuitive board system, where users can manage tasks, plans, notes, and personal goals through a collection of flexible widgets.
+HeyWaffle.app is a webapp made in collaboration with Daniel Chung. A digital tool that can help people organize their daily lives in a more visual and interactive way. Designed around the idea of an intuitive board system, where users can manage tasks, plans, notes, and personal goals through a collection of flexible widgets.
 
 Working on HeyWaffle allowed me to focus on building an engaging user experience centered on simplicity, customization, and interaction. I implemented a dynamic interface where users can arrange different widgets on a board to create their own personalized organization space. This project pushed me to think carefully about usability, layout structure, and how to make productivity tools feel natural rather than overwhelming.
 

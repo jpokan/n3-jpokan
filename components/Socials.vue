@@ -12,7 +12,7 @@
 <script setup>
 const links = [
 	{ link: "mailto:contact@jpokan.com", text: "EMAIL" },
-	{ link: "https://x.com/jpokan", text: "X" },
+	{ link: "https://instagram.com/oujorge", text: "INSTAGRAM" },
 	{ link: "https://github.com/jpokan", text: "GITHUB" },
 ];
 </script>

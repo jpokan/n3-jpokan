@@ -168,7 +168,8 @@ function goToLink() {
 	setTimeout(() => {
 		// resets the icon
 		loadIcon.value = false;
-	}, 3000);
+		console.error("Failed to load go to link");
+	}, 20000);
 }
 
 function play() {

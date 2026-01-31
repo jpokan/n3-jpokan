@@ -6,3 +6,5 @@ navigation:
     cover: ""
     video: https://ik.imagekit.io/castles/VIDEO/cursorful-video-1750713205441.mp4?updatedAt=1750713233075
 ---
+
+This project integrates Maptiler API to create a customization tool. The main features include changing the colors layers, find cities and map locations by name, zoom feature and export the result as a png file.
