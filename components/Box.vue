@@ -28,7 +28,7 @@
 						class="h-full w-full"
 						ref="imgRef"
 						:class="[pos[ipos], aspects[imgAspect], fit[imgFit]]"
-						:src="src ? '/' : `${src}&tr=w-1200`"
+						:src="src === '/' ? '' : `${src}&tr=w-1200`"
 						:alt="alt" />
 				</div>
 			</Transition>
