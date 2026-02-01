@@ -10,17 +10,6 @@ export default defineNuxtConfig({
 	colorMode: {
 		classSuffix: "",
 	},
-	// router: {
-	// 	scrollBehavior(to, from, savedPosition) {
-	// 		if (to.hash) {
-	// 			return {
-	// 				el: to.hash,
-	// 				behavior: "smooth",
-	// 			};
-	// 		}
-	// 		return savedPosition || { x: 0, y: 0 }; // Default scroll to top
-	// 	},
-	// },
 	content: {
 		build: {
 			markdown: {

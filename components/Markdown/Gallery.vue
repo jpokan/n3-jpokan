@@ -1,6 +1,16 @@
 <template>
 	<FancyBox class="grid grid-cols-2 gap-5">
-		<MarkdownImage v-for="item in links" :key="item" :src="item" />
+		<a
+			class=""
+			:href="`${item}&tr=w-1920`"
+			:key="(index, item)"
+			v-for="item in links"
+			:data-fancybox="`gallery-${index}`">
+			<img
+				v-lazy="{ src: `${item}&tr=w-300` }"
+				class="object-cover w-full" />
+			<slot></slot>
+		</a>
 	</FancyBox>
 </template>
 

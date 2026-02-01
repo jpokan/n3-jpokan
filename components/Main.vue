@@ -14,7 +14,7 @@
 		<Box
 			class="col-span-4 lg:col-span-2 lg:row-span-2"
 			link="/lab?preview=/lab/apps/archlogs"
-			src="/img/compressed/archlogs.webp"
+			src="https://ik.imagekit.io/castles/COVERS/archlogs.com_%20full.png?updatedAt=1750785498085"
 			vid="https://ik.imagekit.io/castles/VIDEO/cursorful-video-1750709106804.mp4?updatedAt=1750709980684"
 			title="Archlogs"
 			description="An elegant solution for architects to upload their work and share their portfolio."
@@ -24,7 +24,7 @@
 		<Box
 			class="col-span-4 lg:col-span-2 lg:row-span-2"
 			link="/lab?preview=/lab/apps/heywaffle"
-			src="/img/compressed/heywaffle.webp"
+			src="https://ik.imagekit.io/castles/COVERS/heywaffle.app_%20full.png?updatedAt=1750785497954"
 			vid="https://ik.imagekit.io/castles/VIDEO/cursorful-video-1750709895677.mp4?updatedAt=1750709982601"
 			title="Heywaffle"
 			description="A board like web application with a widget system to organize your daily tasks and more."
@@ -109,7 +109,7 @@
 		<Box
 			description="Design and implementation of wordpress landing pages. Customization of css, scripts, plugins and other integrations."
 			class="col-span-4 xl:col-span-3 xl:max-w-[940px] relative">
-			<CarouselWordpress class="" />
+			<CarouselWordpress class="relative" />
 		</Box>
 		<Box
 			class="border-none col-span-4"
@@ -172,7 +172,7 @@
 			description="Design Studio 06"
 			imgFit="cover"
 			imgAspect="10/7"
-			src="https://ik.imagekit.io/castles/JPOKAN/t6/PANEL%202.webp" />
+			src="https://ik.imagekit.io/castles/JPOKAN/t6/PANEL%202.webp?updatedAt=1769085354900" />
 		<Box
 			link="/lab?preview=/lab/architecture/w07"
 			class="col-span-4 sm:col-span-2 lg:col-span-1"
@@ -198,21 +198,29 @@
 			title="Photography"
 			description="" />
 		<Box
-			class="col-span-4 sm:col-span-2 md:col-span-2"
-			src="https://ik.imagekit.io/castles/JPOKAN/travel/Kyoto/Fushimi%20Inari%20Taisha/2Z7A0024_01.jpg?updatedAt=1736779973930&tr=w-1920"
-			link="/lab/photography/travel" />
-		<Box
-			class="col-span-4 sm:col-span-2 md:col-span-2"
+			class="col-span-4 sm:col-span-2 md:col-span-2 xl:col-span-1"
 			src="https://ik.imagekit.io/castles/JPOKAN/architecture/Asakusa%20Culture%20Tourist%20Information%20Center/2Z7A0176.webp?updatedAt=1736780032160&tr=w-1920"
+			ipos="center"
+			imgFit="cover"
 			link="/lab/photography/architecture" />
 		<Box
-			class="col-span-4 sm:col-span-4 md:col-span-2"
-			src="https://ik.imagekit.io/castles/JPOKAN/travel/Tokyo/Yabusame/2Z7A1581_result.webp"
+			class="col-span-4 sm:col-span-2 md:col-span-2 xl:col-span-1"
+			src="https://ik.imagekit.io/castles/JPOKAN/travel/Kyoto/Fushimi%20Inari%20Taisha/2Z7A0024_01.jpg?updatedAt=1736779973930&tr=w-1920"
+			ipos="center"
+			imgFit="cover"
 			link="/lab/photography/travel" />
 		<Box
-			class="border-none col-span-4 text-center text-zinc-300 dark:text-zinc-600"
-			description="Developed using various open source tools like Nuxt, Vue, TailwindCSS and more...">
-			<IconsShield class="mx-auto w-4 text-center" />
+			class="col-span-4 sm:col-span-4 md:col-span-2 xl:col-span-1"
+			src="https://ik.imagekit.io/castles/JPOKAN/travel/Tokyo/Yabusame/2Z7A1581_result.webp?updatedAt=1769862453008"
+			ipos="center"
+			imgFit="cover"
+			link="/lab/photography/travel" />
+		<Box class="border-none col-span-4 text-center">
+			<div class="grid gap-4 text-zinc-300 dark:text-zinc-600 pt-10">
+				<IconsShield class="mx-auto w-4 text-center" />
+				Developed using various open source tools like Nuxt, Vue,
+				TailwindCSS and more...
+			</div>
 		</Box>
 	</div>
 </template>

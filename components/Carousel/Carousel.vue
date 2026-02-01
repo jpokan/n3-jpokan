@@ -52,7 +52,7 @@ export default {
 					...(this.carouselOptions || {}),
 				},
 				{
-					Arrows,
+					// Arrows,
 					// Toolbar,
 					// Autoplay,
 					Thumbs,

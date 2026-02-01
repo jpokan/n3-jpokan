@@ -3,7 +3,7 @@
 		<img
 			data-fancybox="markdown-gallery"
 			class="aspect-[3/2] object-cover object-center"
-			:src="props.src"
+			:src="`${props.src}`"
 			alt="" />
 		<slot></slot>
 	</a>

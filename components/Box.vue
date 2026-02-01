@@ -28,7 +28,7 @@
 						class="h-full w-full"
 						ref="imgRef"
 						:class="[pos[ipos], aspects[imgAspect], fit[imgFit]]"
-						:src="src"
+						:src="src ? '/' : `${src}&tr=w-1200`"
 						:alt="alt" />
 				</div>
 			</Transition>
@@ -67,16 +67,18 @@
 			<h3 v-if="title" class="font-jost font-bold pb-3">
 				{{ title }}
 			</h3>
-			<p v-if="description" class="">{{ description }}</p>
+			<p v-if="description" class="text-zinc-400 dark:text-zinc-400">
+				{{ description }}
+			</p>
 		</div>
 		<NuxtLink
 			v-if="link"
 			:to="link"
 			@click="goToLink"
-			class="transition w-4 h-4 absolute bottom-1 right-1 rounded-lg hover:bg-zinc-400 dark:hover:bg-zinc-500 dark:bg-zinc-700 bg-zinc-300">
-			<IconsUp
+			class="transition w-4 h-4 absolute bottom-1 right-1">
+			<IconsPlus
 				v-if="!loadIcon"
-				class="text-zinc-100 dark:text-zinc-900" />
+				class="text-zinc-300 dark:text-zinc-700 hover:text-zinc-400 dark:hover:text-zinc-500" />
 			<IconsLoader
 				v-else
 				class="animate-spin text-zinc-100 dark:text-zinc-900" />

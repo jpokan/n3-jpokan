@@ -131,8 +131,9 @@
 }
 
 .n-arrow .p-arrow {
-	position: fixed;
-	bottom: 0;
+	/* position: absolute; */
+	/* transform: translateY(700px); */
+	/* bottom: 0; */
 }
 
 #carousel-wordpress {
