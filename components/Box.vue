@@ -81,7 +81,7 @@
 				class="text-zinc-300 dark:text-zinc-700 hover:text-zinc-400 dark:hover:text-zinc-500" />
 			<IconsLoader
 				v-else
-				class="animate-spin text-zinc-100 dark:text-zinc-900" />
+				class="animate-spin text-zinc-900 dark:text-zinc-100" />
 		</NuxtLink>
 	</div>
 </template>
