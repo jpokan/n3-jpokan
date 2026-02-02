@@ -92,9 +92,13 @@
 					<ModalLink
 						class="w-auto px-5"
 						target="_blank"
-						:to="props.selected.navigation?.url">
+						:to="
+							props.selected.navigation?.url
+								? props.selected.navigation?.url
+								: ''
+						">
 						{{ props.selected.navigation?.title }}
-						<IconsLink class="w-4" />
+						<IconsGoOutside class="ml-2 w-4 h-4" />
 					</ModalLink>
 					<ModalLink
 						v-if="props.selected.body.value.length > 0"

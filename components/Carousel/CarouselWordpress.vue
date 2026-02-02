@@ -6,9 +6,12 @@
 			class="h-auto overflow-y-auto max-h-[620px]">
 			<div
 				class="f-carousel__slide"
-				:data-thumb-src="i"
+				:data-thumb-src="`${i}&tr=w-100`"
 				v-for="i in links">
-				<img class="object-cover object-top top-0" :src="i" alt="" />
+				<img
+					class="object-cover object-top top-0"
+					:src="`${i}&tr=w-1200`"
+					alt="" />
 			</div>
 		</Carousel>
 	</div>
@@ -16,9 +19,9 @@
 
 <script setup>
 const links = [
-	"https://a.storyblok.com/f/98358/1903x5549/684464ed28/1597218933023.png",
-	"https://a.storyblok.com/f/98358/1246x1829/ba4d047db2/ve-arquitectura.png",
-	"https://a.storyblok.com/f/98358/1263x1725/65170c8e23/jorgealbertoayllon-com_-laptop-with-mdpi-screen.png",
+	"https://ik.imagekit.io/castles/COVERS/1597218933023.png?updatedAt=1770032557797",
+	"https://ik.imagekit.io/castles/COVERS/ve-arquitectura.png?updatedAt=1770032556444",
+	"https://ik.imagekit.io/castles/COVERS/jorgealbertoayllon-com_-laptop-with-mdpi-screen.png?updatedAt=1770032556459",
 ];
 
 const options = {

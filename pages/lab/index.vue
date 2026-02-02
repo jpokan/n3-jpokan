@@ -13,11 +13,16 @@
 			</div>
 			<ul class="mb-5">
 				<li v-for="(i, index) in item.children">
-					<NuxtLink class="jpk-sublink" v-if="i.i_url" :to="i.i_url">
+					<!-- Internal links only i.i_url -->
+					<NuxtLink
+						class="jpk-sublink"
+						v-if="i.title && i.i_url"
+						:to="i.i_url">
 						{{ i.title }}
 					</NuxtLink>
+					<!-- Projects only -->
 					<button
-						v-if="i.url"
+						v-if="i.title && !i.i_url"
 						@click="setPreview(i.path)"
 						class="jpk-sublink">
 						{{ i.title }}

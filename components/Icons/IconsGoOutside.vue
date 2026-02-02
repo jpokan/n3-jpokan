@@ -1,8 +1,5 @@
 <template>
-	<svg
-		class="ml-1 w-4 h-4"
-		xmlns="http://www.w3.org/2000/svg"
-		viewBox="0 0 24 24">
+	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 		<path
 			fill="none"
 			stroke="currentColor"

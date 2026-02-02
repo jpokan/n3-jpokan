@@ -77,18 +77,19 @@
 			vid="https://ik.imagekit.io/castles/VIDEO/cursorful-video-1750763167984.mp4?updatedAt=1750763361898"
 			:vfull="true" />
 		<Box
-			vAspect="2/3"
+			vAspect="1/1"
 			class="col-span-4 sm:col-span-2 md:col-span-2 lg:col-span-1"
 			description="Based on normals."
 			:vfull="true"
 			vid="https://ik.imagekit.io/castles/VIDEO/cursorful-video-1750762980870.mp4?updatedAt=1750763355679" />
 		<Box
-			vAspect="2/3"
+			vAspect="1/1"
 			class="col-span-4 sm:col-span-2 md:col-span-2 lg:col-span-1"
 			description="Particles on a sphere."
 			:vfull="true"
 			vid="https://ik.imagekit.io/castles/VIDEO/cursorful-video-1750697975766.mp4?updatedAt=1750703525901" />
 		<Box
+			vAspect="1/1"
 			description="Layered paper model."
 			class="col-span-4 sm:col-span-2 md:col-span-2 lg:col-span-1"
 			:vfull="true"
@@ -96,8 +97,8 @@
 		<Box
 			class="col-span-4 sm:col-span-2 lg:col-span-1"
 			link="/lab?preview=/lab/concepts/card"
-			description="Css & html card scene."
-			imgAspect="2/3"
+			description="CSS & HTML card scene."
+			imgAspect="1/1"
 			ipos="center"
 			imgFit="cover"
 			src="https://ik.imagekit.io/castles/COVERS/codepen.io_jpokan_full_LYZqWpq.png?updatedAt=1750785490408" />
@@ -217,9 +218,8 @@
 			link="/lab/photography/travel" />
 		<Box class="border-none col-span-4 text-center">
 			<div class="grid gap-4 text-zinc-300 dark:text-zinc-600 pt-10">
-				<IconsShield class="mx-auto w-4 text-center" />
-				Developed using various open source tools like Nuxt, Vue,
-				TailwindCSS and more...
+				<IconsBlackHole class="mx-auto w-4 text-center" />
+				Developed using Nuxt, Vue, TailwindCSS and more...
 			</div>
 		</Box>
 	</div>

@@ -1,7 +1,7 @@
 ---
 navigation:
     title: Fulgione & Chavez
-    url: /lab/architecture/fulgione
+    url:
     description: Work under Fulgione and Chavez Design Studio
     cover: "https://ik.imagekit.io/castles/JPOKAN/practice/boulevar/20141105%20-%20SUM%20A3%20S-A01.webp?updatedAt=1769293009981"
     video: ""

@@ -41,8 +41,8 @@
 				leave-active-class="transition-all duration-200 ease-in">
 				<div
 					v-if="vid && swapState === 'vid'"
-					class="h-full w-ful"
-					:class="[{ 'p-5 absolute inset-x-0 top-0': src }]">
+					class="w-full"
+					:class="[{ 'px-5 pt-5 absolute inset-x-0 top-0': src }]">
 					<LoaderLine :class="[{ invisible: loaded }]" class="mx-5" />
 					<video
 						@loadeddata="handleLoaded"
@@ -76,7 +76,7 @@
 			:to="link"
 			@click="goToLink"
 			class="transition w-4 h-4 absolute bottom-1 right-1">
-			<IconsPlus
+			<IconsGoInside
 				v-if="!loadIcon"
 				class="text-zinc-300 dark:text-zinc-700 hover:text-zinc-400 dark:hover:text-zinc-500" />
 			<IconsLoader
