@@ -8,6 +8,7 @@
 			<div
 				class="f-carousel__slide"
 				:data-thumb-src="i"
+				:key="i"
 				v-for="i in links">
 				<img :data-lazy-src="i" class="f-panzoom__content" alt="" />
 			</div>

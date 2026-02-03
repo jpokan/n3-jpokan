@@ -2,9 +2,10 @@
 	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 		<!-- Icon from Solar by 480 Design - https://creativecommons.org/licenses/by/4.0/ -->
 		<path
-			fill="currentColor"
-			fill-rule="evenodd"
-			d="M11.5 2.75a8.75 8.75 0 1 0 0 17.5a8.75 8.75 0 0 0 0-17.5M1.25 11.5c0-5.66 4.59-10.25 10.25-10.25S21.75 5.84 21.75 11.5c0 2.56-.939 4.902-2.491 6.698l3.271 3.272a.75.75 0 1 1-1.06 1.06l-3.272-3.271A10.2 10.2 0 0 1 11.5 21.75c-5.66 0-10.25-4.59-10.25-10.25M11.5 8.25a.75.75 0 0 1 .75.75v1.75H14a.75.75 0 0 1 0 1.5h-1.75V14a.75.75 0 0 1-1.5 0v-1.75H9a.75.75 0 0 1 0-1.5h1.75V9a.75.75 0 0 1 .75-.75"
-			clip-rule="evenodd" />
+			fill="none"
+			stroke="currentColor"
+			stroke-linecap="round"
+			stroke-width="1.5"
+			d="M22 12A10 10 0 1 1 12 2m3 10h-3m0 0H9m3 0V9m0 3v3m2.5-12.685c3.514.904 6.28 3.67 7.185 7.185" />
 	</svg>
 </template>

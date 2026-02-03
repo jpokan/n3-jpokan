@@ -1,11 +1,9 @@
 <template>
 	<FancyBox class="grid grid-cols-2 gap-5">
 		<a
-			class=""
-			:href="`${item}`"
-			:key="(item, index)"
-			v-for="(item, index) in links"
-			:data-fancybox="`gallery-${index}`">
+			v-for="item in links"
+			:href="item"
+			:data-fancybox="`${project}-gallery`">
 			<img
 				v-lazy="{ src: `${item}&tr=w-600` }"
 				class="object-cover w-full" />
@@ -15,5 +13,5 @@
 </template>
 
 <script setup>
-const props = defineProps(["links"]);
+const props = defineProps(["links", "project"]);
 </script>

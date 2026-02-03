@@ -76,7 +76,7 @@
 			:to="link"
 			@click="goToLink"
 			class="transition w-4 h-4 absolute bottom-1 right-1">
-			<IconsGoInside
+			<IconsPlus
 				v-if="!loadIcon"
 				class="text-zinc-300 dark:text-zinc-700 hover:text-zinc-400 dark:hover:text-zinc-500" />
 			<IconsLoader
