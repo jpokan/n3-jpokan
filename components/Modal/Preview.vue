@@ -69,7 +69,7 @@
 				</div>
 			</TransitionGroup>
 			<div
-				class="fixed bottom-5 px-5 lg:px-5 flex gap-4 w-full justify-between flex-wrap z-20">
+				class="fixed bottom-5 px-5 lg:px-5 flex gap-4 w-full justify-between z-20">
 				<div class="flex gap-4">
 					<ModalButton @click="back">
 						<IconsLeft class="w-4" />
@@ -78,29 +78,34 @@
 						<IconsRight class="w-4" />
 					</ModalButton>
 				</div>
-				<div class="flex gap-4 flex-wrap">
+				<div class="flex gap-4">
 					<ModalLink
+						class="hidden sm:block"
 						to="#previewImage"
 						v-if="props.selected.navigation?.cover">
 						<IconsImage class="w-4" />
 					</ModalLink>
 					<ModalLink
+						class="hidden sm:block"
 						to="#video"
 						v-if="props.selected.navigation?.video">
 						<IconsVideo class="w-4" />
 					</ModalLink>
 					<ModalLink
-						class="w-auto px-5"
+						class="w-auto sm:px-5"
 						target="_blank"
 						:to="
 							props.selected.navigation?.url
 								? props.selected.navigation?.url
 								: ''
 						">
-						{{ props.selected.navigation?.title }}
-						<IconsGoOutside class="ml-2 w-4 h-4" />
+						<span class="hidden sm:block">
+							{{ props.selected.navigation?.title }}
+						</span>
+						<IconsGoOutside class="sm:ml-2 w-4 h-4" />
 					</ModalLink>
 					<ModalLink
+						class="hidden sm:block"
 						v-if="props.selected.body.value.length > 0"
 						to="#info">
 						<IconsInfo class="w-4" />
