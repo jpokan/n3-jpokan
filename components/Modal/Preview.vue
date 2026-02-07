@@ -83,16 +83,16 @@
 						class="hidden sm:block"
 						to="#previewImage"
 						v-if="props.selected.navigation?.cover">
-						<IconsImage class="w-4" />
+						<IconsImage class="w-full" />
 					</ModalLink>
 					<ModalLink
 						class="hidden sm:block"
 						to="#video"
 						v-if="props.selected.navigation?.video">
-						<IconsVideo class="w-4" />
+						<IconsVideo class="w-full" />
 					</ModalLink>
 					<ModalLink
-						class="w-auto sm:px-5"
+						class="w-full sm:px-5"
 						target="_blank"
 						:to="
 							props.selected.navigation?.url
@@ -108,7 +108,7 @@
 						class="hidden sm:block"
 						v-if="props.selected.body.value.length > 0"
 						to="#info">
-						<IconsInfo class="w-4" />
+						<IconsInfo class="w-full" />
 					</ModalLink>
 				</div>
 				<div class="flex gap-4 sm:w-24 justify-end">
