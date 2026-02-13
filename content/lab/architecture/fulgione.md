@@ -7,7 +7,7 @@ navigation:
     video: ""
 ---
 
-Mainly residential and commercial types of projects.
+Residential and commercial projects plans and detail drawings in CAD.
 
 ### Delicass Cafe
 

@@ -30,10 +30,10 @@
 								v-if="_loading"
 								class="w-10 animate-spin h-fit mx-auto lg:h-video"></IconsLoader>
 							<video
+								id="video"
 								:class="{ 'absolute invisible': _loading }"
 								@loadeddata="loaded"
-								id="video"
-								class="mx-auto h-fit lg:h-video"
+								class="mx-auto h-fit lg:h-video scroll-mt-10"
 								:key="props.selected.navigation?.video"
 								:src="props.selected.navigation?.video"
 								autoplay
@@ -43,14 +43,15 @@
 							id="previewImage"
 							v-if="props.selected.navigation?.cover"
 							:key="props.selected.navigation?.cover"
-							class="w-full max-w-xl mx-auto">
+							class="w-full max-w-xl mx-auto scroll-mt-10">
 							<img
 								:src="props.selected.navigation?.cover"
 								class="mx-auto lg:object-contain"
 								alt="" />
 						</div>
 						<h1
-							class="pt-10 h-fit text-center font-black font-jost text-5xl">
+							id="info"
+							class="pt-10 h-fit text-center font-black font-jost text-5xl scroll-mt-10">
 							{{ props.selected.navigation?.title }}
 						</h1>
 						<p
@@ -59,7 +60,6 @@
 							{{ props.selected.navigation?.description }}
 						</p>
 						<div
-							id="info"
 							class="mx-auto w-full max-w-xl prose-img:m-0 prose prose-zinc dark:prose-invert prose-a:no-underline prose-a:font-black prose-headings:uppercase prose-headings:font-semibold prose-h1:font-bold">
 							<ContentRenderer
 								:prose="true"

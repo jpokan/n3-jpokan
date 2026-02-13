@@ -56,6 +56,7 @@
 			vid="https://ik.imagekit.io/castles/VIDEO/cursorful-video-1750711955221.mp4?updatedAt=1750712924484"
 			:vfull="true" />
 		<Box
+			id="webgl"
 			class="border-none col-span-4 sm:col-span-4 lg:col-span-1"
 			src="/"
 			title="Webgl and three.js"
@@ -104,6 +105,7 @@
 			src="https://ik.imagekit.io/castles/COVERS/codepen.io_jpokan_full_LYZqWpq.png?updatedAt=1750785490408" />
 		<Box
 			class="border-none col-span-4 xl:col-span-1"
+			id="wordpress"
 			src="/"
 			title="Wordpress"
 			description="" />
@@ -113,6 +115,7 @@
 			<CarouselWordpress class="relative" />
 		</Box>
 		<Box
+			id="architecture"
 			class="border-none col-span-4"
 			src="/"
 			title="Architecture"
@@ -196,6 +199,7 @@
 		<Box
 			class="border-none col-span-4"
 			src="/"
+			id="photography"
 			title="Photography"
 			description="" />
 		<Box
