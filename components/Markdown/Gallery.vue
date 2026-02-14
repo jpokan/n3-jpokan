@@ -13,10 +13,17 @@
 </template>
 
 <script setup>
-const props = defineProps(["links", "project"]);
-const colorMode = useColorMode();
+import { config } from "~/assets/js/fancyboxOptions.js";
+defineProps(["links", "project"]);
 
-const options = {
-	theme: colorMode.value,
-};
+const colorMode = useColorMode();
+const options = ref(config);
+
+onMounted(() => {
+	options.value = {
+		// attach theme on mount
+		theme: colorMode.value,
+		...config,
+	};
+});
 </script>

@@ -1,9 +1,9 @@
 <template>
 	<div class="grid grid-cols-[1fr,110px] grid-flow-row">
 		<Carousel
-			:delay="200"
-			:carousel-options="options"
 			id="carousel-post"
+			:carousel-options="options"
+			:delay="200"
 			class="f-carousel">
 			<div
 				class="f-carousel__slide"
@@ -38,11 +38,6 @@ const options = {
 		Carousel: {
 			vertical: true,
 		},
-	},
-	Autoplay: {
-		autoStart: false,
-		// pauseOnHover: true,
-		timeout: 5000,
 	},
 	style: {
 		"--f-progressbar-color": "rgba(200,200,200,1)",

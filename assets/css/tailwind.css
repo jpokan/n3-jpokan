@@ -110,60 +110,12 @@
 	background-size: 10px 10px;
 }
 
-/* .f-thumbs { */
-/* 	--f-thumbs-padding-y: 0px; */
-/* 	--f-thumbs-padding-x: 0px; */
-/* 	--f-thumbs-gap: 10px; */
-/* 	--f-thumb-width: 100px; */
-/* 	--f-thumb-selected-shadow: none; */
-/* 	--f-thumb-border-radius: 0; */
-/* 	--f-thumb-opacity: 0.5; */
-/* 	--f-thumb-selected-opacity: 1; */
-/* } */
-
-#f-container {
-	/* 	--f-thumbs-padding-y: 0px; */
-	/* display: grid; */
-	/* grid-template-columns: 1fr 112px; */
-	/* grid-auto-flow: column; */
-	/* max-width: 100%; */
-	/* margin: 0 auto; */
-}
-
-.n-arrow .p-arrow {
-	/* position: absolute; */
-	/* transform: translateY(700px); */
-	/* bottom: 0; */
-}
-
 #carousel-wordpress {
 	position: relative;
-	/* --f-carousel-gap: 0px; */
-	/* --f-carousel-slide-width: 100%; */
-
-	/* --f-arrow-pos: 0px; */
-	/* --f-arrow-width: 38px; */
-	/* --f-arrow-height: 38px; */
 	--f-arrow-svg-width: 20px;
 	--f-arrow-svg-height: 20px;
 	--f-arrow-svg-stroke-width: 0.5;
-	/* --f-arrow-color: #475569; */
-	/* --f-arrow-shadow: */
-	/* 	0 6px 12px -2px rgb(50 50 93 / 25%), 0 3px 7px -3px rgb(0 0 0 / 30%); */
-	/* --f-arrow-border-radius: 50%; */
-	/* --f-arrow-bg: #fff; */
-	/* --f-arrow-hover-bg: #f9f9f9; */
-	/* --f-arrow-active-bg: #f0f0f0; */
-
-	/* order: 1; */
 }
-
-/* #f-carousel .f-carousel__slide { */
-/* 	display: flex; */
-/* 	align-items: center; */
-/* 	justify-content: center; */
-/* 	cursor: pointer; */
-/* } */
 
 #carousel-post {
 	--f-carousel-slide-height: 100%;

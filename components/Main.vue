@@ -204,13 +204,13 @@
 			description="" />
 		<Box
 			class="col-span-4 sm:col-span-2 md:col-span-2 xl:col-span-1"
-			src="https://ik.imagekit.io/castles/JPOKAN/architecture/Asakusa%20Culture%20Tourist%20Information%20Center/2Z7A0176.webp?updatedAt=1736780032160&tr=w-1920"
+			src="https://ik.imagekit.io/castles/JPOKAN/travel/Kyoto/Gion/2Z7A9680.jpg?updatedAt=1736779973682&tr=w-600"
 			ipos="center"
 			imgFit="cover"
-			link="/lab/photography/architecture" />
+			link="/lab/photography/travel" />
 		<Box
-			class="col-span-4 sm:col-span-2 md:col-span-2 xl:col-span-1"
-			src="https://ik.imagekit.io/castles/JPOKAN/travel/Kyoto/Fushimi%20Inari%20Taisha/2Z7A0024_01.jpg?updatedAt=1736779973930&tr=w-1920"
+			class="col-span-4 sm:col-span-4 md:col-span-2 xl:col-span-1"
+			src="https://ik.imagekit.io/castles/JPOKAN/travel/Hakone/2Z7A9834.jpg?updatedAt=1771041340679"
 			ipos="center"
 			imgFit="cover"
 			link="/lab/photography/travel" />
@@ -220,10 +220,16 @@
 			ipos="center"
 			imgFit="cover"
 			link="/lab/photography/travel" />
+		<Box
+			class="col-span-4 sm:col-span-2 md:col-span-2 xl:col-span-1"
+			src="https://ik.imagekit.io/castles/JPOKAN/travel/Kyoto/Fushimi%20Inari%20Taisha/2Z7A0024_01.jpg?updatedAt=1736779973930&tr=w-600"
+			ipos="center"
+			imgFit="cover"
+			link="/lab/photography/travel" />
 		<Box class="border-none col-span-4 text-center">
 			<div class="grid gap-4 text-zinc-300 dark:text-zinc-600 pt-10">
 				<IconsBlackHole class="mx-auto w-4 text-center" />
-				Developed using Nuxt, Vue, TailwindCSS and more...
+				<p>Nuxt・Vue・TailwindCSS</p>
 			</div>
 		</Box>
 	</div>
